@@ -1,6 +1,5 @@
 import LandingSection from "../../components/sections/landingsection/landingsection.component";
-
-import { AboutSection } from "./homepage.styles";
+import AboutSection from "../../components/sections/aboutsection/aboutsection.component";
 
 const Homepage = () => (
   <main>

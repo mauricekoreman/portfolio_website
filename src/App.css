@@ -16,7 +16,7 @@
 
     /* 12vw + 1rem is what it wants to be, but it will never be smaller than 5rem nor bigger than 8rem */
   --fs-xl: clamp(4rem, 6vw + 1rem, 8rem);
-  --fs-large: 3.5rem;
+  --fs-large: 3rem;
   --fs-medium: 1.8rem;
   --fs-small: 1.3rem;
 

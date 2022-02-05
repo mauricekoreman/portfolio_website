@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LandingSectionContainer = styled.div`
+export const LandingSectionContainer = styled.section`
   /* 
   display: flex;
   height: 80vh;
@@ -17,9 +17,12 @@ export const LandingSectionContainer = styled.div`
 `;
 
 export const ButtonsContainer = styled.div`
-  display: flex;
-  gap: 1em;
   margin: 4rem 0 8rem 0;
+  width: 100%;
+
+  & > button:first-child {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ImageContainer = styled.figure`
@@ -27,11 +30,11 @@ export const ImageContainer = styled.figure`
   /* --imageSize: clamp(40rem, 25vw + 1rem, 52rem);
   width: var(--imageSize);
   height: var(--imageSize); 
-  margin-right: calc(35% - (var(--imageSize) / 2));
+  margin-right: calc(35% - (var(--imageSize) / 2)); 
   */
 
-  width: 70%;
-  height: 70%;
+  max-width: 60rem;
+  max-height: 60rem;
   position: relative;
   display: grid;
   place-items: center;
@@ -39,15 +42,15 @@ export const ImageContainer = styled.figure`
 `;
 
 export const Image = styled.img`
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   object-fit: contain;
   z-index: 3;
 `;
 
 export const Frame = styled.img`
-  height: 110%;
-  width: 110%;
+  height: 100%;
+  width: 100%;
   position: absolute;
   z-index: 2;
 `;

@@ -1,22 +1,24 @@
 import {
-  HeadingContainer,
   HeadingLine,
   TopHeaderContainer,
   TopHeader,
   Line,
 } from "../heading-secondary/heading-secondary.styles";
 
-const HeadingSecondary = ({ lineOne, lineTwo, topText }) => (
-  <div>
-    <TopHeaderContainer>
-      <Line />
-      <TopHeader>{topText}</TopHeader>
-    </TopHeaderContainer>
-    <HeadingContainer>
-      <HeadingLine>{lineOne}</HeadingLine>
-      <HeadingLine>{lineTwo}</HeadingLine>
-    </HeadingContainer>
-  </div>
-);
+const HeadingSecondary = ({ className, headingText, topText, topColor, headingColor }) => {
+  let textArr = headingText
+    .split("\n")
+    .map((i) => <HeadingLine color={headingColor}>{i}</HeadingLine>);
+
+  return (
+    <div className={className}>
+      <TopHeaderContainer>
+        <Line color={topColor} />
+        <TopHeader color={topColor}>{topText}</TopHeader>
+      </TopHeaderContainer>
+      {textArr}
+    </div>
+  );
+};
 
 export default HeadingSecondary;

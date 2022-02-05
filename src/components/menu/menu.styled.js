@@ -24,18 +24,19 @@ export const MenuBtnLines = styled.button`
   &::after {
     content: "";
     position: absolute;
-    right: 0;
     transition: all 0.2s;
   }
 
   &::before {
     top: -0.8rem;
-    width: 156%;
+    width: 50%;
+    left: 0;
   }
 
   &::after {
     top: 0.8rem;
     width: 50%;
+    right: 0;
   }
 `;
 

@@ -10,6 +10,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Homepage />} />
     </Routes>
+    <footer></footer>
   </div>
 );
 

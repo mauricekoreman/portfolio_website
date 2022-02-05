@@ -17,14 +17,18 @@ import { Paragraph } from "../../typography/paragraph/paragraph.styles";
 const LandingSection = () => {
   return (
     <LandingSectionContainer>
-      <HeadingPrimary lineOne={`Hi, I'm Maurice`} lineTwo={"Koreman"} />
+      <HeadingPrimary
+        topText={"Hi, my name is"}
+        headingText={"Maurice Koreman."}
+        bottomText={"And I Love Webdevelopment"}
+      />
       <Paragraph margin={"2rem 0 "}>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
         et justo
       </Paragraph>
       <ButtonsContainer>
-        <CustomButton>Works</CustomButton>
+        <CustomButton>What I've Built</CustomButton>
         <CustomButton isOutlined>Download CV</CustomButton>
       </ButtonsContainer>
       <ImageContainer>

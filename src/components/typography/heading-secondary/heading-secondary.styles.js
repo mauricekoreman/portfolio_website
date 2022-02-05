@@ -11,22 +11,18 @@ export const TopHeaderContainer = styled.div`
 export const Line = styled.div`
   height: 0.2rem;
   width: 0.8rem;
-  background-color: var(--accent-color);
+  background-color: ${({ color }) => (color ? color : "var(--accent-color);")};
 `;
 
-export const HeadingContainer = styled.h2`
+export const HeadingLine = styled.h2`
   font-size: var(--fs-large);
-  font-weight: var(--fw-regular);
-  color: black;
-  opacity: 0.73;
+  font-weight: var(--fw-medium);
+  color: ${({ color }) => (color ? color : "black")};
+  opacity: ${({ color }) => (color == "white" ? 1 : 0.73)};
 `;
 
 export const TopHeader = styled.span`
-  color: var(--accent-color);
+  color: ${({ color }) => (color ? color : "var(--accent-color);")};
   font-size: var(--fs-medium);
   font-weight: var(--fw-bold);
-`;
-
-export const HeadingLine = styled.span`
-  display: block;
 `;

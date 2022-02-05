@@ -13,7 +13,7 @@ const buttonStyles = css`
 const isOutlined = css`
   background-color: white;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  border: 1.5px solid var(--primary-color);
 
   &:focus,
   &:hover {
@@ -24,8 +24,9 @@ const isOutlined = css`
 `;
 
 const goldenStyles = css`
-  background-color: gold;
-  color: gold;
+  background-color: white;
+  border: 1.5px solid var(--accent-color);
+  color: var(--accent-color);
 
   &:focus,
   &:hover {
@@ -44,6 +45,7 @@ const getButtonStyles = (props) => {
 };
 
 export const ButtonContainer = styled.button`
+  width: inherit;
   height: 5rem;
   padding: 0 2em;
   font-size: 1.6rem;

@@ -147,7 +147,7 @@ export const TextInput = styled.input`
 `;
 
 export const StyledButton = styled(CustomButton)`
-  width: 20rem;
+  width: 100%;
   height: 4rem;
   opacity: 0.8;
 `;

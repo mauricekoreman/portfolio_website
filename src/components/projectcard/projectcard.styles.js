@@ -69,4 +69,9 @@ export const SkillList = styled.ul`
 export const SkillItem = styled.li`
   font-size: var(--fs-small);
   position: relative;
+
+  &:not(:last-child)::after {
+    content: "•";
+    margin-left: 1rem;
+  }
 `;

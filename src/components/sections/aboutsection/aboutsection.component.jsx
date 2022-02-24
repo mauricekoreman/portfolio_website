@@ -12,7 +12,7 @@ import { Paragraph } from "../../typography/paragraph/paragraph.styles";
 import { AboutMeText } from "./aboutMeText";
 
 const AboutSection = () => (
-  <AboutSectionContainer>
+  <AboutSectionContainer id="about">
     <article>
       <HeadingSecondary topText={"About"} headingText={"All About Me"} />
       <Paragraph style={{ marginTop: "1rem" }}>

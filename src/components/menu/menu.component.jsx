@@ -1,12 +1,17 @@
-import { MenuBtnLines, Checkbox, NavContainer, ListContainer, NavigationItem } from "./menu.styled";
+import { useState } from "react";
+import Sidebar from "../sidebar/sidebar.component";
+import { MenuBtnLines } from "./menu.styled";
 
-const Menu = () => (
-  <div>
-    <Checkbox type="checkbox" id="navi-toggle" />
-    <label for="navi-toggle">
-      <MenuBtnLines />
-    </label>
-    {/* <NavContainer>
+const Menu = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => setShowSidebar(!showSidebar);
+
+  return (
+    <div>
+      <MenuBtnLines onClick={toggleSidebar} />
+      <Sidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
+      {/* <NavContainer>
       <ListContainer>
         <NavigationItem>Home</NavigationItem>
         <NavigationItem>Works</NavigationItem>
@@ -14,7 +19,8 @@ const Menu = () => (
         <NavigationItem>Contact Me</NavigationItem>
       </ListContainer>
     </NavContainer> */}
-  </div>
-);
+    </div>
+  );
+};
 
 export default Menu;

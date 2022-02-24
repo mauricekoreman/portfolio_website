@@ -11,28 +11,28 @@ const buttonStyles = css`
 `;
 
 const isOutlined = css`
-  background-color: white;
+  background-color: transparent;
   color: var(--primary-color);
   border: 1.5px solid var(--primary-color);
 
-  &:focus,
   &:hover {
-    background-color: var(--primary-color-dark);
-    color: white;
-    border: 2px solid transparent;
+    background-color: var(--primary-color);
+    color: #fff;
   }
 `;
 
 const goldenStyles = css`
-  background-color: white;
+  background-color: transparent;
   border: 1.5px solid var(--accent-color);
   color: var(--accent-color);
 
-  &:focus,
   &:hover {
-    background-color: lightgoldenrodyellow;
-    border: none;
+    background-color: var(--accent-color);
     color: white;
+  }
+
+  &:focus {
+    border-width: 2px;
   }
 `;
 

@@ -15,7 +15,7 @@ import ProjectCard from "../../projectcard/projectcard.component";
 import CustomButton from "../../buttons/custom-button/custom-button.component";
 
 const Workssection = () => (
-  <WorkssectionContainer>
+  <WorkssectionContainer id="works">
     <div>
       <GreenBlock>
         <HeadingSecondary

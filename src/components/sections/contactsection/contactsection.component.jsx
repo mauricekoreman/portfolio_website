@@ -2,7 +2,7 @@ import { SectionContainer } from "./contactsection.styles";
 import ContactCard from "../../contact-card/contact-card.component";
 
 const Contactsection = () => (
-  <SectionContainer>
+  <SectionContainer id="contact">
     <ContactCard />
   </SectionContainer>
 );

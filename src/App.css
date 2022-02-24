@@ -40,6 +40,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  font-family: var(--font-family);
 }
 
 /* define font root size -> define what 1rem is
@@ -50,7 +51,6 @@ normaal fontsize = 16px. 62.5% * 16px = 10px. Als de gebruiker nu de root font-s
 1 rem = root fontsize -> so now: 1rem = 10px instead of 1rem = 16px */
 html {
   font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% */
-  font-family: var(--font-family);
 }
 
 body {

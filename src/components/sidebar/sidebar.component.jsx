@@ -1,6 +1,7 @@
 import { HashLink } from "react-router-hash-link";
 import { Navbar, MenuItemList, MenuItem, Toggle, NavButton } from "./sidebar.styles.js";
 import { FiX } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const sidebarData = [
   {
@@ -25,8 +26,33 @@ const sidebarData = [
   },
 ];
 
+const sidebarVariant = {
+  hidden: {
+    x: "100%",
+    transition: {
+      type: "tween",
+      duration: 0.2,
+      ease: "easeOut",
+    },
+  },
+  visible: {
+    x: "0%",
+    transition: {
+      type: "tween",
+      duration: 0.2,
+      ease: "easeOut",
+    },
+  },
+};
+
+const MotionNavbar = motion(Navbar);
+
 const Sidebar = ({ showSidebar, toggleSidebar }) => (
-  <Navbar showSidebar={showSidebar ? true : false}>
+  <MotionNavbar
+    variants={sidebarVariant}
+    initial={"hidden"}
+    animate={showSidebar ? "visible" : "hidden"}
+  >
     <Toggle onClick={toggleSidebar}>
       <FiX color="white" size={40} strokeWidth={1} />
     </Toggle>
@@ -40,7 +66,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => (
       ))}
       <NavButton isOutlined>Download CV</NavButton>
     </MenuItemList>
-  </Navbar>
+  </MotionNavbar>
 );
 
 export default Sidebar;

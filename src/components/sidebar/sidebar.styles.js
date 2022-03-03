@@ -10,8 +10,6 @@ export const Navbar = styled.nav`
   position: fixed;
   top: 0;
   right: 0;
-  transform: ${({ showSidebar }) => (showSidebar ? "translateX(0)" : "translateX(100%)")};
-  transition: transform 350ms;
   z-index: 99;
   list-style: none;
 `;

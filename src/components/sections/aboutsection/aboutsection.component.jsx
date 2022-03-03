@@ -6,36 +6,53 @@ import {
   SkillContainer,
   List,
   ListItem,
+  AboutGrid,
+  TitleContainer,
+  StyledWavyLine,
 } from "./aboutsection.styles";
 import { Paragraph } from "../../typography/paragraph/paragraph.styles";
 
 import { AboutMeText } from "./aboutMeText";
 
+const technologiesList = [
+  "JavaScript",
+  "Adobe XD",
+  "ReactJS",
+  "React Native",
+  "HTML/CSS/Sass",
+  "Wordpress",
+  "Firebase",
+];
+
 const AboutSection = () => (
   <AboutSectionContainer id="about">
-    <article>
+    <TitleContainer>
       <HeadingSecondary topText={"About"} headingText={"All About Me"} />
       <Paragraph style={{ marginTop: "1rem" }}>
         A front-end web developer who is all about crafting the best user experience.
       </Paragraph>
-    </article>
+    </TitleContainer>
 
-    {AboutMeText.map((info, i) => (
-      <AboutMe key={i}>
-        <AboutMeHeading>{info.title}</AboutMeHeading>
-        <Paragraph>{info.text}</Paragraph>
-        {info.title.toLowerCase() == "my career so far" && (
-          <SkillContainer>
-            <Paragraph>{info.technologiesIntro}</Paragraph>
-            <List>
-              {info.technologiesList.map((j) => (
-                <ListItem key={j}>{j}</ListItem>
-              ))}
-            </List>
-          </SkillContainer>
-        )}
-      </AboutMe>
-    ))}
+    <AboutMe>
+      <AboutMeHeading>UX & Development</AboutMeHeading>
+      <Paragraph>
+        My aspiration to live creativity and meet people’s actual needs when it comes to media
+        consumption led me to complete my Bachelor’s in Graphic Design.
+      </Paragraph>
+      <Paragraph>
+        My aspiration to live creativity and meet people’s actual needs when it comes to media
+        consumption led me to complete my Bachelor’s in Graphic Design consumption led me to
+        complete my Bachelor’s in consumption led me to complete my Bachelor’s in
+      </Paragraph>
+      <SkillContainer>
+        <Paragraph>Some technologies i use form my work</Paragraph>
+        <List>
+          {technologiesList.map((j) => (
+            <ListItem key={j}>{j}</ListItem>
+          ))}
+        </List>
+      </SkillContainer>
+    </AboutMe>
   </AboutSectionContainer>
 );
 

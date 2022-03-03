@@ -4,37 +4,40 @@ import {
   ImageContainer,
   Image,
   Frame,
+  StyledParagraph,
+  Content,
 } from "./landingsection.styles";
 
-import PictureFrameInverted from "../../../assets/img/picture-frame-inverted.svg";
 import sexy from "../../../assets/img/Profile-picture.png";
 
 import HeadingPrimary from "../../typography/heading-primary/heading-primary.component";
 import CustomButton from "../../buttons/custom-button/custom-button.component";
 
-import { Paragraph } from "../../typography/paragraph/paragraph.styles";
-
 const LandingSection = () => {
   return (
     <LandingSectionContainer>
-      <HeadingPrimary
-        topText={"Hi, my name is"}
-        headingText={"Maurice Koreman."}
-        bottomText={"And I Love Webdevelopment"}
-      />
-      <Paragraph margin={"2rem 0 "}>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-        et justo
-      </Paragraph>
-      <ButtonsContainer>
-        <CustomButton>What I've Built</CustomButton>
-        <CustomButton isOutlined>Download CV</CustomButton>
-      </ButtonsContainer>
-      <ImageContainer>
-        <Frame src={PictureFrameInverted} />
-        <Image src={sexy} alt="Maurice profile picture" />
-      </ImageContainer>
+      <Content>
+        <div>
+          <HeadingPrimary
+            topText={"Hi, my name is"}
+            headingText={"Maurice Koreman."}
+            bottomText={"And I Love Webdevelopment"}
+          />
+          <StyledParagraph margin={"2rem 0 "}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo
+          </StyledParagraph>
+          <ButtonsContainer>
+            <CustomButton>What I've Built</CustomButton>
+            <CustomButton isOutlined>Download CV</CustomButton>
+          </ButtonsContainer>
+        </div>
+        <ImageContainer>
+          <Frame />
+          <Image src={sexy} alt="Maurice profile picture" />
+        </ImageContainer>
+      </Content>
     </LandingSectionContainer>
   );
 };

@@ -7,7 +7,7 @@ import {
 } from "./heading-primary.styles";
 
 const HeadingPrimary = ({ headingText, topText, bottomText }) => {
-  let textArr = headingText.split("\n").map((i) => <HeadingLine>{i}</HeadingLine>);
+  let textArr = headingText.split("\n").map((e, i) => <HeadingLine key={i}>{e}</HeadingLine>);
 
   return (
     <div>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../breakpoints";
 
 export const Paragraph = styled.p`
   font-size: var(--fs-medium);

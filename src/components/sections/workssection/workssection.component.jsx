@@ -1,6 +1,6 @@
 import {
   ButtonContainer,
-  GreenBlock,
+  TitleContainer,
   ProjectsContainer,
   WorkssectionContainer,
 } from "./workssection.styles";
@@ -17,14 +17,9 @@ import CustomButton from "../../buttons/custom-button/custom-button.component";
 const Workssection = () => (
   <WorkssectionContainer id="works">
     <div>
-      <GreenBlock>
-        <HeadingSecondary
-          topText={"Works"}
-          headingText={"Some things that \n I've built"}
-          topColor={"white"}
-          headingColor={"white"}
-        />
-      </GreenBlock>
+      <TitleContainer>
+        <HeadingSecondary topText={"Works"} headingText={"Some Things That \n I've Built"} />
+      </TitleContainer>
     </div>
     <ProjectsContainer>
       <ProjectCard backgroundImage={project1} />

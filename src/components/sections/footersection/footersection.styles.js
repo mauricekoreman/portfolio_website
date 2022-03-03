@@ -30,7 +30,7 @@ export const FooterNav = styled.nav`
   font-weight: var(--fw-medium);
 
   & > li {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     & > a {
       text-decoration: none;

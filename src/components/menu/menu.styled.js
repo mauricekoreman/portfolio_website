@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../breakpoints";
 
 export const MenuBtnLines = styled.button`
   position: relative;
@@ -14,6 +15,10 @@ export const MenuBtnLines = styled.button`
     width: 2.5rem;
     height: 2px;
     background-color: var(--primary-color);
+
+    @media ${device.tablet} {
+      background-color: #fff;
+    }
   }
 
   &::before,

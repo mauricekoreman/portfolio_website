@@ -6,9 +6,11 @@ import {
 } from "../heading-secondary/heading-secondary.styles";
 
 const HeadingSecondary = ({ className, headingText, topText, topColor, headingColor }) => {
-  let textArr = headingText
-    .split("\n")
-    .map((i) => <HeadingLine color={headingColor}>{i}</HeadingLine>);
+  let textArr = headingText.split("\n").map((e, i) => (
+    <HeadingLine key={i} color={headingColor}>
+      {e}
+    </HeadingLine>
+  ));
 
   return (
     <div className={className}>

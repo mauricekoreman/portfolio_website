@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../breakpoints";
 
 export const HeaderContainer = styled.header`
   /* display: flex;
@@ -12,5 +13,9 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem var(--inner-content) 5rem var(--inner-content);
+  padding: 1rem 2rem 5rem 2rem;
+
+  @media ${device.tablet} {
+    background: linear-gradient(90deg, #fff 65%, var(--primary-color) 65%);
+  }
 `;

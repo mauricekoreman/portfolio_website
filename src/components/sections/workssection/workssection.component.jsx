@@ -16,15 +16,13 @@ import CustomButton from "../../buttons/custom-button/custom-button.component";
 
 const Workssection = () => (
   <WorkssectionContainer id="works">
-    <div>
-      <TitleContainer>
-        <HeadingSecondary topText={"Works"} headingText={"Some Things That \n I've Built"} />
-      </TitleContainer>
-    </div>
+    <TitleContainer>
+      <HeadingSecondary topText={"Works"} headingText={"Some Things That \n I've Built"} />
+    </TitleContainer>
     <ProjectsContainer>
-      <ProjectCard backgroundImage={project1} />
-      <ProjectCard backgroundImage={project2} />
-      <ProjectCard backgroundImage={project3} />
+      <ProjectCard alignment backgroundImage={project1} />
+      <ProjectCard alignment={false} backgroundImage={project2} />
+      <ProjectCard alignment backgroundImage={project3} />
       <ButtonContainer>
         <CustomButton goldenStyles>See all projects</CustomButton>
       </ButtonContainer>

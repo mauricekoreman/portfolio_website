@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import HeadingSecondary from "../typography/heading-secondary/heading-secondary.component";
 import CustomButton from "../buttons/custom-button/custom-button.component";
+import { device } from "../../breakpoints";
 
 export const Card = styled.article`
   background-color: white;
@@ -8,12 +9,15 @@ export const Card = styled.article`
   box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    padding: 3rem 5rem;
+  }
 
   & > div {
     background: linear-gradient(90deg, #dae0da 15rem, white 15rem);
-
-    /* For desktop */
-    /* background: linear-gradient(90deg, #dae0da 70%, white 70%); */
     padding: 3rem 3rem;
     position: relative;
   }
@@ -53,12 +57,27 @@ export const SocialsContainer = styled.div`
     display: none;
   }
 
-  & > svg {
+  & > a {
     display: block;
+    color: black;
     font-size: 2.5rem;
-    stroke-width: 1.5px;
-    stroke-opacity: 0.51;
     margin-bottom: 1.5rem;
+  }
+
+  @media ${device.tablet} {
+    top: unset;
+    bottom: 2rem;
+    right: unset;
+
+    & > p {
+      display: block;
+    }
+
+    & > a {
+      display: inline;
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
   }
 `;
 
@@ -76,16 +95,17 @@ export const Form = styled.form`
     "button";
   gap: 4rem;
 
-  /* For desktop */
-  /* row-gap: 3rem;
-  column-gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "name email"
-    "subject ."
-    "message message"
-    "button ."; */
-  /* background-color: cyan; */
+  @media ${device.tablet} {
+    margin-top: 7rem;
+    row-gap: 3rem;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name email"
+      "subject ."
+      "message message"
+      "button .";
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -98,22 +118,18 @@ export const InputContainer = styled.div`
   }
 
   &:nth-child(1) {
-    /* border: 1px solid blue; */
     grid-area: name;
   }
   &:nth-child(2) {
-    /* border: 1px solid darkmagenta; */
     grid-area: email;
   }
   &:nth-child(3) {
-    /* border: 1px solid orangered; */
     grid-area: subject;
   }
   &:nth-child(4) {
     grid-area: message;
   }
   &:nth-child(5) {
-    /* border: 1px solid green; */
     grid-area: button;
   }
 `;
@@ -144,6 +160,10 @@ export const TextInput = styled.input`
     outline: none;
     border-bottom: 1px solid #707070;
   }
+`;
+
+export const TextAreaInput = styled(TextInput)`
+  height: 7rem;
 `;
 
 export const StyledButton = styled(CustomButton)`

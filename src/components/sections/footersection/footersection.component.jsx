@@ -1,41 +1,64 @@
 import { FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi";
+import { HashLink } from "react-router-hash-link";
 import {
   Footer,
   FooterBottom,
   FooterContainer,
-  FooterNav,
+  FooterFlex,
+  FooterNavList,
   Mail,
   SocialsContainer,
 } from "./footersection.styles";
 
+const iconStyles = {
+  strokeWidth: 1,
+  size: 25,
+};
+
 const Footersection = () => (
   <Footer>
     <FooterContainer>
-      <div>
-        <Mail href="#">gkoreman.m@gmail.com</Mail>
+      <FooterFlex>
+        <Mail href="mailto:gkoreman.m@gmail.com" taget="_blank">
+          gkoreman.m@gmail.com
+        </Mail>
         <nav>
-          <FooterNav>
+          <FooterNavList>
             <li>
-              <a href="#">Home</a>
+              <HashLink smooth to="#">
+                Home
+              </HashLink>
             </li>
             <li>
-              <a href="#">About</a>
+              <HashLink smooth to="#about">
+                About
+              </HashLink>
             </li>
             <li>
-              <a href="#">Works</a>
+              <HashLink smooth to="#works">
+                Works
+              </HashLink>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <HashLink smooth to="#contact">
+                Contact
+              </HashLink>
             </li>
-          </FooterNav>
+          </FooterNavList>
         </nav>
-      </div>
+      </FooterFlex>
       <FooterBottom>
         <p>© Maurice Koreman 2022</p>
         <SocialsContainer>
-          <FiInstagram />
-          <FiLinkedin />
-          <FiGithub />
+          <a href="https://www.instagram.com/mauricekoreman/" target="_blank">
+            <FiInstagram {...iconStyles} />
+          </a>
+          <a href="https://www.linkedin.com/in/mauricekoreman/" target="_blank">
+            <FiLinkedin {...iconStyles} />
+          </a>
+          <a href="https://github.com/mauricekoreman" target="_blank">
+            <FiGithub {...iconStyles} />
+          </a>
         </SocialsContainer>
       </FooterBottom>
     </FooterContainer>

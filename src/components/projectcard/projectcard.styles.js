@@ -14,7 +14,7 @@ export const ImageContainer = styled.figure`
 
   @media ${device.tablet} {
     grid-column: ${({ alignment }) => (alignment ? "1 / 8" : "6 / -1")};
-    height: 30rem;
+    height: 35rem;
   }
 `;
 
@@ -60,7 +60,8 @@ export const ProjectContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: ${({ alignment }) => (alignment ? "flex-end" : "flex-start")};
-    grid-column: ${({ alignment }) => (alignment ? "7 / -1" : "1 / 7")};
+    grid-column: ${({ alignment }) => (alignment ? "9 / -1" : "1 / 5")};
+    padding: 4rem 0;
 
     & > div {
       background-color: #7b927b;

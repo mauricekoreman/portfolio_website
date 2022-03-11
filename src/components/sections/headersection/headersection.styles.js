@@ -17,5 +17,6 @@ export const HeaderContainer = styled.header`
 
   @media ${device.tablet} {
     background: linear-gradient(90deg, #fff 65%, var(--primary-color) 65%);
+    /* padding-right: 0; */
   }
 `;

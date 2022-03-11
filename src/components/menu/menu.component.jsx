@@ -1,6 +1,13 @@
 import { useState } from "react";
 import Sidebar from "../sidebar/sidebar.component";
-import { MenuBtnLines } from "./menu.styled";
+import {
+  MenuBtn,
+  MenuBtnLines,
+  NavContainer,
+  ListContainer,
+  NavigationItem,
+  MenuButton,
+} from "./menu.styled";
 
 const Menu = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -8,18 +15,20 @@ const Menu = () => {
   const toggleSidebar = () => setShowSidebar(!showSidebar);
 
   return (
-    <div>
-      <MenuBtnLines onClick={toggleSidebar} />
+    <>
+      <MenuBtn onClick={toggleSidebar}>
+        <MenuBtnLines />
+      </MenuBtn>
       <Sidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
       {/* <NavContainer>
-      <ListContainer>
-        <NavigationItem>Home</NavigationItem>
-        <NavigationItem>Works</NavigationItem>
-        <NavigationItem>Resume</NavigationItem>
-        <NavigationItem>Contact Me</NavigationItem>
-      </ListContainer>
-    </NavContainer> */}
-    </div>
+        <ListContainer>
+          <NavigationItem>Home</NavigationItem>
+          <NavigationItem>Works</NavigationItem>
+          <NavigationItem>Resume</NavigationItem>
+          <NavigationItem>Contact Me</NavigationItem>
+        </ListContainer>
+      </NavContainer> */}
+    </>
   );
 };
 

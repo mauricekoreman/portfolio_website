@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../breakpoints";
 
 export const Footer = styled.footer`
   background-color: var(--primary-color-dark);
@@ -13,18 +14,31 @@ export const FooterContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const Mail = styled.p`
-  display: none;
+export const FooterFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
 
-  text-decoration: none;
-  color: white;
-  font-size: var(--fs-medium);
-  letter-spacing: 1.1px;
-  border-bottom: 1px solid white;
-  padding-bottom: 5px;
+  & > nav {
+    margin-right: 20rem;
+  }
 `;
 
-export const FooterNav = styled.nav`
+export const Mail = styled.a`
+  display: none;
+
+  @media ${device.tablet} {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    font-size: var(--fs-medium);
+    letter-spacing: 1.1px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    align-self: flex-start;
+  }
+`;
+
+export const FooterNavList = styled.ul`
   list-style: none;
   font-size: var(--fs-medium);
   font-weight: var(--fw-medium);
@@ -65,4 +79,13 @@ export const FooterBottom = styled.div`
 
 export const SocialsContainer = styled.div`
   display: none;
+
+  & > a {
+    margin-left: 2rem;
+    color: white;
+  }
+
+  @media ${device.tablet} {
+    display: inline-block;
+  }
 `;

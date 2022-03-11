@@ -1,9 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device } from "../../../breakpoints";
+import { Square, Triangle } from "../aboutsection/aboutsection.styles";
 
 export const WorkssectionContainer = styled.section`
   margin-top: 8rem;
   margin-bottom: 15rem;
+  position: relative;
 
   @media ${device.tablet} {
     margin-top: 14rem;
@@ -23,7 +25,7 @@ export const TitleContainer = styled.div`
 
   @media ${device.desktop} {
     /* margin-left: 15rem; */
-    max-width: 115rem;
+    max-width: 130rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -31,7 +33,7 @@ export const TitleContainer = styled.div`
 
 export const ProjectsContainer = styled.div`
   padding: 8rem var(--inner-content) 0 var(--inner-content);
-  max-width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -48,7 +50,7 @@ export const ProjectsContainer = styled.div`
   }
 
   & > li {
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
   }
 `;
 
@@ -56,4 +58,24 @@ export const ButtonContainer = styled.div`
   background-color: white;
   padding: 3rem 0;
   z-index: 1;
+  margin: 5rem 0;
+`;
+
+const shape = css`
+  opacity: 0.16;
+`;
+
+export const StyledSquare = styled(Square)`
+  right: 15%;
+  top: 40rem;
+
+  ${shape}
+`;
+
+export const StyledTriangle = styled(Triangle)`
+  top: unset;
+  left: 25%;
+  bottom: 15rem;
+
+  ${shape}
 `;

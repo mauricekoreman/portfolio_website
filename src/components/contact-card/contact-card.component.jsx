@@ -8,9 +8,15 @@ import {
   StyledHeadingSecondary,
   TextInput,
   StyledButton,
+  TextAreaInput,
 } from "./contact-card.styles";
 
 import { FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi";
+
+const iconStyles = {
+  strokeWidth: 1.5,
+  strokeOpacity: 0.51,
+};
 
 const ContactCard = () => (
   <Card>
@@ -23,9 +29,16 @@ const ContactCard = () => (
       <Mail href="#">gkoreman.m@gmail.com</Mail>
       <SocialsContainer>
         <p>Find me</p>
-        <FiInstagram />
-        <FiLinkedin />
-        <FiGithub />
+
+        <a href="https://www.instagram.com/mauricekoreman/" target="_blank">
+          <FiInstagram {...iconStyles} />
+        </a>
+        <a href="https://www.linkedin.com/in/mauricekoreman/" target="_blank">
+          <FiLinkedin {...iconStyles} />
+        </a>
+        <a href="https://github.com/mauricekoreman" target="_blank">
+          <FiGithub {...iconStyles} />
+        </a>
       </SocialsContainer>
     </div>
     <Form>
@@ -46,7 +59,7 @@ const ContactCard = () => (
 
       <InputContainer>
         <Label>Your message</Label>
-        <TextInput required as="textarea" type="text" placeholder="Tell me.. :D" />
+        <TextAreaInput required as="textarea" type="text" placeholder="Tell me.. :D" />
       </InputContainer>
 
       <InputContainer>

@@ -5,7 +5,7 @@ import { device } from "../../breakpoints";
 
 export const Card = styled.article`
   background-color: white;
-  max-width: 100rem;
+  max-width: 120rem;
   box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.16);
   display: flex;
   flex-direction: column;
@@ -26,7 +26,14 @@ export const Card = styled.article`
 export const StyledHeadingSecondary = styled(HeadingSecondary)`
   grid-area: heading;
   margin-bottom: 5rem;
-  /* border: 1px solid darkolivegreen; */
+
+  & > h2 {
+    font-size: 4rem;
+
+    @media ${device.tablet} {
+      font-size: 3.8rem;
+    }
+  }
 `;
 
 export const Mail = styled.a`
@@ -46,7 +53,6 @@ export const Mail = styled.a`
 `;
 
 export const SocialsContainer = styled.div`
-  /* border: 1px solid darksalmon; */
   position: absolute;
   right: 3rem;
   top: 50%;
@@ -66,7 +72,7 @@ export const SocialsContainer = styled.div`
 
   @media ${device.tablet} {
     top: unset;
-    bottom: 2rem;
+    bottom: 3rem;
     right: unset;
 
     & > p {
@@ -96,10 +102,18 @@ export const Form = styled.form`
   gap: 4rem;
 
   @media ${device.tablet} {
-    margin-top: 7rem;
-    row-gap: 3rem;
+    margin-top: 10rem;
+    row-gap: 4rem;
     column-gap: 2rem;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name email"
+      "subject subject"
+      "message message"
+      "button .";
+  }
+
+  @media ${device.desktop} {
     grid-template-areas:
       "name email"
       "subject ."
@@ -170,4 +184,8 @@ export const StyledButton = styled(CustomButton)`
   width: 100%;
   height: 4rem;
   opacity: 0.8;
+
+  @media ${device.desktop} {
+    width: 70%;
+  }
 `;

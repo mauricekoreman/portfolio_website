@@ -14,10 +14,12 @@ const HeadingSecondary = ({ className, headingText, topText, topColor, headingCo
 
   return (
     <div className={className}>
-      <TopHeaderContainer>
-        <Line color={topColor} />
-        <TopHeader color={topColor}>{topText}</TopHeader>
-      </TopHeaderContainer>
+      {topText && (
+        <TopHeaderContainer>
+          <Line color={topColor} />
+          <TopHeader color={topColor}>{topText}</TopHeader>
+        </TopHeaderContainer>
+      )}
       {textArr}
     </div>
   );

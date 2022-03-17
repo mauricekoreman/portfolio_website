@@ -28,6 +28,10 @@ export const Toggle = styled.li`
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const MenuItem = styled.li`

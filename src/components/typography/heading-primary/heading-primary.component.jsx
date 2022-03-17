@@ -12,7 +12,7 @@ const HeadingPrimary = ({ headingText, topText, bottomText }) => {
   return (
     <div>
       <TopHeaderContainer>
-        <Line />
+        {/* <Line /> */}
         <TopHeader>{topText}</TopHeader>
       </TopHeaderContainer>
       {textArr}

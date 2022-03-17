@@ -8,10 +8,6 @@ import {
   ListItem,
   Content,
   TitleContainer,
-  Image,
-  Square,
-  Circle,
-  Triangle,
 } from "./aboutsection.styles";
 import { Paragraph } from "../../typography/paragraph/paragraph.styles";
 
@@ -29,8 +25,8 @@ const AboutSection = () => (
   <AboutSectionContainer id="about">
     <Content>
       <TitleContainer>
-        <HeadingSecondary topText={"About"} headingText={"All About Me"} />
-        <Paragraph style={{ marginTop: "1rem" }}>
+        <HeadingSecondary headingText={"All About Me"} />
+        <Paragraph>
           My aspiration to live creativity and meet people’s actual needs when it comes to media
           consumption led me to complete my Bachelor’s in Graphic Design.
         </Paragraph>
@@ -48,20 +44,17 @@ const AboutSection = () => (
           complete my Bachelor’s in consumption led me to complete my Bachelor’s in
         </Paragraph>
         <SkillContainer>
-          <Paragraph>Some technologies i use form my work</Paragraph>
-          <List>
-            {technologiesList.map((j) => (
-              <ListItem key={j}>{j}</ListItem>
-            ))}
-          </List>
+          <div>
+            <Paragraph>Some technologies i use for my work</Paragraph>
+            <List>
+              {technologiesList.map((j) => (
+                <ListItem key={j}>{j}</ListItem>
+              ))}
+            </List>
+          </div>
         </SkillContainer>
       </AboutMe>
     </Content>
-    <Image>
-      <Square />
-      <Circle />
-      <Triangle />
-    </Image>
   </AboutSectionContainer>
 );
 

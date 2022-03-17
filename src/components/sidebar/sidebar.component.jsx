@@ -2,6 +2,7 @@ import { HashLink } from "react-router-hash-link";
 import { Navbar, MenuItemList, MenuItem, Toggle, NavButton } from "./sidebar.styles.js";
 import { FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
+import Backdrop from "../backdrop/backdrop.component.jsx";
 
 const sidebarData = [
   {
@@ -48,25 +49,28 @@ const sidebarVariant = {
 const MotionNavbar = motion(Navbar);
 
 const Sidebar = ({ showSidebar, toggleSidebar }) => (
-  <MotionNavbar
-    variants={sidebarVariant}
-    initial={"hidden"}
-    animate={showSidebar ? "visible" : "hidden"}
-  >
-    <Toggle onClick={toggleSidebar}>
-      <FiX color="white" size={40} strokeWidth={1} />
-    </Toggle>
-    <MenuItemList>
-      {sidebarData.map((item, index) => (
-        <MenuItem key={index}>
-          <HashLink smooth to={item.path} onClick={toggleSidebar}>
-            {item.title}
-          </HashLink>
-        </MenuItem>
-      ))}
-      <NavButton isOutlined>Download CV</NavButton>
-    </MenuItemList>
-  </MotionNavbar>
+  <>
+    <Backdrop show={showSidebar} toggleShow={toggleSidebar} />
+    <MotionNavbar
+      variants={sidebarVariant}
+      initial={"hidden"}
+      animate={showSidebar ? "visible" : "hidden"}
+    >
+      <Toggle onClick={toggleSidebar}>
+        <FiX color="white" size={40} strokeWidth={1} />
+      </Toggle>
+      <MenuItemList>
+        {sidebarData.map((item, index) => (
+          <MenuItem key={index}>
+            <HashLink smooth to={item.path} onClick={toggleSidebar}>
+              {item.title}
+            </HashLink>
+          </MenuItem>
+        ))}
+        <NavButton isOutlined>Download CV</NavButton>
+      </MenuItemList>
+    </MotionNavbar>
+  </>
 );
 
 export default Sidebar;

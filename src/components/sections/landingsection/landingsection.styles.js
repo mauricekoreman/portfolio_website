@@ -5,37 +5,37 @@ import pictureFrame from "../../../assets/img/picture-frame.svg";
 import { Paragraph } from "../../typography/paragraph/paragraph.styles";
 
 export const LandingSectionContainer = styled.section`
-  /* 
-  display: flex;
-  height: 80vh;
-  padding: 20rem 0 0 13rem;
-  justify-content: space-between;
-  width: 100%;
-  */
-
   padding: 0 var(--inner-content);
+  padding-bottom: 7rem;
   background: linear-gradient(#fff 70%, var(--primary-color) 70%);
-  padding-bottom: 10em;
   width: 100%;
   overflow: hidden;
 
   @media ${device.tablet} {
     background: linear-gradient(90deg, #fff 65%, var(--primary-color) 65%);
-    padding-bottom: 0;
-  }
-
-  @media ${device.desktop} {
-    /* padding: 0;
-    border: 1px solid red; */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 `;
 
 export const Content = styled.div`
-  max-width: 150rem;
+  max-width: 180rem;
   margin: 0 auto;
 
   @media ${device.tablet} {
     display: flex;
+    justify-content: center;
+  }
+
+  @media ${device.mediumDesktop} {
+    gap: 3rem;
+  }
+
+  @media ${device.biDesktop} {
+    justify-content: space-between;
+    padding-left: 10rem;
+    padding-right: 15rem;
+    gap: 0;
   }
 `;
 
@@ -66,12 +66,6 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const ImageContainer = styled.figure`
-  /* For the bigger screen sizes maybe */
-  /* --imageSize: clamp(40rem, 25vw + 1rem, 52rem);
-  width: var(--imageSize);
-  height: var(--imageSize); 
-  margin-right: calc(35% - (var(--imageSize) / 2)); 
-  */
   max-width: 60rem;
   max-height: 60rem;
   position: relative;
@@ -80,18 +74,20 @@ export const ImageContainer = styled.figure`
   margin: 0 auto;
 
   @media ${device.tablet} {
-    /* --imageSize: clamp(40rem, 25vw + 1rem, 50rem); */
     --imageSize: 40rem;
     max-width: unset;
     max-height: unset;
     width: var(--imageSize);
     height: var(--imageSize);
+    margin: unset;
+  }
+
+  @media ${device.desktop} {
+    margin-right: 7%;
   }
 
   @media ${device.mediumDesktop} {
-    --imageSize: 50rem;
-    /* margin-right: calc(34% - (var(--imageSize) / 2)); */
-    transform: translateX(-20%);
+    --imageSize: 45rem;
   }
 `;
 

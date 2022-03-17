@@ -16,7 +16,7 @@ export const Line = styled.div`
 
 export const HeadingLine = styled.h2`
   font-size: var(--fs-large);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
   color: ${({ color }) => (color ? color : "black")};
   opacity: ${({ color }) => (color == "white" ? 1 : 0.73)};
 `;

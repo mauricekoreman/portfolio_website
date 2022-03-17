@@ -23,7 +23,6 @@ const ContactCard = () => (
     <div>
       <StyledHeadingSecondary
         topColor={"rgba(0, 0, 0, .31)"}
-        topText={"Contact"}
         headingText={"Send Me A \n Message!"}
       />
       <Mail href="#">gkoreman.m@gmail.com</Mail>

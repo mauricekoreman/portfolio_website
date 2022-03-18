@@ -4,6 +4,7 @@ import { device } from "../../../breakpoints";
 export const AboutSectionContainer = styled.section`
   padding: 0 var(--inner-content);
   padding-top: 10rem;
+  position: relative;
 
   @media ${device.tablet} {
     padding-top: 18rem;
@@ -14,6 +15,7 @@ export const Content = styled.div`
   max-width: 100ch;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 `;
 
 export const TitleContainer = styled.article`
@@ -72,4 +74,48 @@ export const ListItem = styled.li`
     line-height: 1.6rem;
     color: var(--primary-color);
   }
+`;
+
+export const ShapesContainer = styled.div`
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 8rem;
+`;
+
+const SVGPattern = styled.div`
+  background-image: ${({ pattern }) => `url(${pattern})`};
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+`;
+
+export const Raster = styled(SVGPattern)`
+  bottom: 0;
+  right: 50%;
+  transform: translate(50rem, -20rem);
+`;
+
+export const Circles = styled(SVGPattern)`
+  top: 0;
+  left: 50%;
+  transform: translateX(-55rem);
+`;
+
+export const Stairs = styled(SVGPattern)`
+  top: 0;
+  left: 50%;
+  height: 8rem;
+  width: 8rem;
+  transform: translate(-45rem, 20rem);
+`;
+
+export const HorizontalStairs = styled(Stairs)`
+  top: unset;
+  left: unset;
+  bottom: 0;
+  right: 50%;
+  transform: translate(40rem, 0) rotate(-45deg);
 `;

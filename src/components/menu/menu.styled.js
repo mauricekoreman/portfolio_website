@@ -45,30 +45,7 @@ export const MenuBtnLines = styled.div`
     &,
     &::before,
     &::after {
-      background-color: #fff;
+      background-color: ${({ bg }) => (bg ? "#FFF" : "var(--primary-color)")};
     }
   }
-`;
-
-export const NavContainer = styled.nav`
-  display: none;
-
-  @media ${device.desktop} {
-    display: inline-block;
-    width: 35%;
-  }
-`;
-
-export const ListContainer = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-`;
-
-export const NavigationItem = styled.li`
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 800;
-  opacity: 0.6;
 `;

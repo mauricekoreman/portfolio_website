@@ -9,9 +9,10 @@ export const WorkssectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   @media ${device.desktop} {
-    margin-top: 20rem;
+    margin-top: 18rem;
   }
 `;
 
@@ -27,7 +28,7 @@ export const Background = styled.div`
   }
 
   @media ${device.desktop} {
-    padding: 8rem 8rem 0 8rem;
+    padding: 11rem 8rem 6rem 8rem;
   }
 `;
 
@@ -56,7 +57,7 @@ export const ProjectsContainer = styled.div`
   align-items: center;
 
   @media ${device.tablet} {
-    padding: 8rem 0 0 0;
+    padding: 15rem 0 0 0;
   }
 
   &::before {
@@ -65,7 +66,7 @@ export const ProjectsContainer = styled.div`
     border: 0.5px solid var(--accent-color);
     height: 140%;
     position: absolute;
-    top: 4rem;
+    top: 9rem;
   }
 
   & > li {

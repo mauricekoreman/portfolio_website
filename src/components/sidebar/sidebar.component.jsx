@@ -16,7 +16,7 @@ const sidebarData = [
     cName: "menu-item",
   },
   {
-    title: "Works",
+    title: "Projects",
     path: "#works",
     cName: "menu-item",
   },

@@ -71,6 +71,7 @@ export const SkillList = styled.ul`
   flex-wrap: wrap;
   margin-top: 3rem;
   gap: 1rem;
+  justify-content: center;
 `;
 
 export const SkillItem = styled.li`

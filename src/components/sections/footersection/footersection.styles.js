@@ -3,14 +3,17 @@ import { device } from "../../../breakpoints";
 
 export const Footer = styled.footer`
   background-color: var(--primary-color-dark);
-  padding: 10rem 0 5rem 0;
   color: white;
   margin-top: -1px;
+  height: 80vh;
+  display: grid;
+  align-items: end;
+  padding: 20rem 0;
 `;
 
 export const FooterContainer = styled.div`
   width: 80%;
-  max-width: 90rem;
+  max-width: 100rem;
   margin: 0 auto;
 `;
 
@@ -42,6 +45,7 @@ export const FooterNavList = styled.ul`
   list-style: none;
   font-size: var(--fs-medium);
   font-weight: var(--fw-medium);
+  text-align: left;
 
   & > li {
     margin-bottom: 4rem;
@@ -59,7 +63,7 @@ export const FooterBottom = styled.div`
   justify-content: space-between;
   position: relative;
   margin-top: 10rem;
-  padding-top: 2.5rem;
+  padding-top: 4rem;
 
   &::before {
     content: "";
@@ -73,7 +77,7 @@ export const FooterBottom = styled.div`
   }
 
   & > p {
-    font-size: var(--fs-small);
+    font-size: var(--fs-medium);
   }
 `;
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../breakpoints";
 import CustomButton from "../buttons/custom-button/custom-button.component";
 
 export const Navbar = styled.nav`
@@ -26,8 +27,13 @@ export const MenuItemList = styled.ul`
 
 export const Toggle = styled.li`
   position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
+  right: 2.5rem;
+  top: 3rem;
+
+  @media ${device.tablet} {
+    right: 6rem;
+    top: 4rem;
+  }
 
   &:hover {
     cursor: pointer;

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   LandingSectionContainer,
   ButtonsContainer,
@@ -14,6 +15,8 @@ import HeadingPrimary from "../../typography/heading-primary/heading-primary.com
 import CustomButton from "../../buttons/custom-button/custom-button.component";
 
 const LandingSection = () => {
+  const navigate = useNavigate();
+
   return (
     <LandingSectionContainer>
       <Content>
@@ -29,8 +32,10 @@ const LandingSection = () => {
             accusam et justo
           </StyledParagraph>
           <ButtonsContainer>
-            <CustomButton>What I've Built</CustomButton>
-            <CustomButton isOutlined>Download CV</CustomButton>
+            <CustomButton onClick={() => navigate("/projects")}>What I've Built</CustomButton>
+            <CustomButton onClick={() => console.log("Download CV")} isOutlined>
+              Download CV
+            </CustomButton>
           </ButtonsContainer>
         </div>
         <ImageContainer>

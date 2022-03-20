@@ -10,6 +10,7 @@ import {
 } from "./landingsection.styles";
 
 import sexy from "../../../assets/img/Profile-picture.png";
+import CV from "../../../assets/CV_mauricekoreman.pdf";
 
 import HeadingPrimary from "../../typography/heading-primary/heading-primary.component";
 import CustomButton from "../../buttons/custom-button/custom-button.component";
@@ -33,9 +34,9 @@ const LandingSection = () => {
           </StyledParagraph>
           <ButtonsContainer>
             <CustomButton onClick={() => navigate("/projects")}>What I've Built</CustomButton>
-            <CustomButton onClick={() => console.log("Download CV")} isOutlined>
-              Download CV
-            </CustomButton>
+            <a href={CV} target={"_blank"}>
+              <CustomButton isOutlined>See Résumé</CustomButton>
+            </a>
           </ButtonsContainer>
         </div>
         <ImageContainer>

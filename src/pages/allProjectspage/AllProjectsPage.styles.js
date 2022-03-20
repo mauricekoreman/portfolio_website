@@ -62,8 +62,6 @@ export const ProjectTitle = styled.h3`
   font-weight: 300;
   z-index: 1;
   opacity: 0;
-  transition: 0.3s;
   color: #fff;
+  transition: 0.3s;
 `;
-
-export const ProjectDesc = styled.p``;

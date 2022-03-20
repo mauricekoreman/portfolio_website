@@ -67,7 +67,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => (
             </HashLink>
           </MenuItem>
         ))}
-        <NavButton isOutlined>Download CV</NavButton>
+        <NavButton isOutlined>Download Résumé</NavButton>
       </MenuItemList>
     </MotionNavbar>
   </>

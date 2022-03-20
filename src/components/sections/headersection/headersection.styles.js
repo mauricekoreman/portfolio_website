@@ -7,6 +7,10 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 3rem 2.5rem 5rem 2.5rem;
 
+  & > img {
+    cursor: pointer;
+  }
+
   @media ${device.tablet} {
     background: ${({ bg }) =>
       bg ? "linear-gradient(90deg, #fff 65%, var(--primary-color) 65%)" : "#FFF"};

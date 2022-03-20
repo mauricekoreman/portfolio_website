@@ -29,8 +29,8 @@ const Footersection = () => {
     <Footer>
       <FooterContainer>
         <FooterFlex>
-          <Mail href="mailto:gkoreman.m@gmail.com" taget="_blank">
-            gkoreman.m@gmail.com
+          <Mail href="mailto:hello@mauricekoreman.nl" taget="_blank">
+            hello@mauricekoreman.nl
           </Mail>
           <nav>
             {hashlink ? (

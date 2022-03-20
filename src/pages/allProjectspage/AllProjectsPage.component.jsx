@@ -3,7 +3,6 @@ import Footersection from "../../components/sections/footersection/footersection
 import HeadingPrimary from "../../components/typography/heading-primary/heading-primary.component";
 import {
   Project,
-  ProjectDesc,
   ProjectImage,
   ProjectsContainer,
   ProjectsPage,

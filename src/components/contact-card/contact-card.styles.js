@@ -43,13 +43,6 @@ export const Mail = styled.a`
   padding-bottom: 0.3rem;
   font-size: 1.5rem;
   letter-spacing: 1.1px;
-
-  /* &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    
-  } */
 `;
 
 export const SocialsContainer = styled.div`
@@ -101,6 +94,28 @@ export const Form = styled.form`
     "button";
   gap: 4rem;
 
+  & > .spinner {
+    align-self: center;
+    justify-self: center;
+
+    @media ${device.tablet} {
+      justify-self: left;
+    }
+
+    @media ${device.desktop} {
+      grid-area: button;
+      justify-self: right;
+    }
+  }
+
+  & > .error__message {
+    font-size: var(--fs-small);
+    grid-area: err;
+    align-self: center;
+    justify-self: left;
+    color: red;
+  }
+
   @media ${device.tablet} {
     margin-top: 10rem;
     row-gap: 4rem;
@@ -110,7 +125,7 @@ export const Form = styled.form`
       "name email"
       "subject subject"
       "message message"
-      "button .";
+      "button err";
   }
 
   @media ${device.desktop} {
@@ -118,7 +133,7 @@ export const Form = styled.form`
       "name email"
       "subject ."
       "message message"
-      "button .";
+      "button err";
   }
 `;
 

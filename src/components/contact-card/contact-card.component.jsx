@@ -1,3 +1,6 @@
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import { AnimatePresence } from "framer-motion";
 import {
   Card,
   Form,
@@ -10,10 +13,9 @@ import {
   StyledButton,
   TextAreaInput,
 } from "./contact-card.styles";
-import emailjs from "emailjs-com";
-import { useRef } from "react";
 
 import { FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi";
+import Spinner from "../spinner/spinner.component";
 
 const iconStyles = {
   strokeWidth: 1.5,
@@ -21,21 +23,41 @@ const iconStyles = {
 };
 
 const ContactCard = () => {
-  const contact = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errMsg, setErrMsg] = useState("");
+
   let templateParams = {
-    from_name: contact.current[0].value,
-    from_email: contact.current[1].value,
-    subject: contact.current[2].value,
-    message: contact.current[3].value,
+    from_name: name,
+    from_email: email,
+    subject: subject,
+    message: message,
   };
 
   function handleSubmit(e) {
     e.preventDefault();
 
+    setLoading(true);
     emailjs.send("portfolioform", "template_contact", templateParams, "RqmwKpIqKFAs96gv0").then(
-      (result) => console.log(result.text),
-      (error) => console.log(error)
+      (result) => {
+        console.log(result.text);
+        setSuccess(true);
+        setLoading(false);
+      },
+      (error) => {
+        console.log(error);
+        setErrMsg("Something went wrong...");
+        setLoading(false);
+      }
     );
+
+    setSuccess(false);
+    setLoading(true);
+    setErrMsg("");
   }
 
   return (
@@ -62,25 +84,46 @@ const ContactCard = () => {
           </a>
         </SocialsContainer>
       </div>
-      <Form ref={contact} onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <InputContainer>
           <Label>Name</Label>
-          <TextInput required type="text" name="contact_name" placeholder="Your name" />
+          <TextInput
+            required
+            type="text"
+            name="contact_name"
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Your name"
+          />
         </InputContainer>
 
         <InputContainer>
           <Label>Email</Label>
-          <TextInput required type="email" placeholder="your@email.com" />
+          <TextInput
+            required
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="your@email.com"
+          />
         </InputContainer>
 
         <InputContainer>
           <Label>Subject</Label>
-          <TextInput type="text" placeholder="What's the topic?" />
+          <TextInput
+            type="text"
+            onChange={(e) => setSubject(e.target.value)}
+            placeholder="What's the topic?"
+          />
         </InputContainer>
 
         <InputContainer>
           <Label>Your message</Label>
-          <TextAreaInput required as="textarea" type="text" placeholder="Tell me.. :D" />
+          <TextAreaInput
+            required
+            as="textarea"
+            type="text"
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Tell me.. :D"
+          />
         </InputContainer>
 
         <InputContainer>
@@ -88,6 +131,12 @@ const ContactCard = () => {
             Send it!
           </StyledButton>
         </InputContainer>
+        <AnimatePresence>
+          {loading && (
+            <Spinner height={"3rem"} width={"3rem"} borderWidth={"3px"} success={success} />
+          )}
+        </AnimatePresence>
+        {errMsg && <p className="error__message">{errMsg}</p>}
       </Form>
     </Card>
   );

@@ -9,7 +9,7 @@ import {
   Content,
 } from "./landingsection.styles";
 
-import sexy from "../../../assets/img/Profile-picture.png";
+import sexy from "../../../assets/img/Profile picture.jpg";
 import CV from "../../../assets/CV_mauricekoreman.pdf";
 
 import HeadingPrimary from "../../typography/heading-primary/heading-primary.component";
@@ -28,12 +28,11 @@ const LandingSection = () => {
             bottomText={"And I Love Webdevelopment"}
           />
           <StyledParagraph margin={"2rem 0 "}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo
+            I'm a frontend webdeveloper located in The Netherlands. I like like to build (and
+            sometimes design) great digital experiences.
           </StyledParagraph>
           <ButtonsContainer>
-            <CustomButton onClick={() => navigate("/projects")}>What I've Built</CustomButton>
+            <CustomButton onClick={() => navigate("/#works")}>What I've Built</CustomButton>
             <a href={CV} target={"_blank"}>
               <CustomButton isOutlined>See Résumé</CustomButton>
             </a>

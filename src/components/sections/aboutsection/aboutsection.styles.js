@@ -19,16 +19,22 @@ export const Content = styled.div`
 `;
 
 export const TitleContainer = styled.article`
-  & > * {
+  & > div {
     margin-bottom: 6rem;
   }
-`;
 
-export const AboutMe = styled.article`
-  & > p:first-of-type {
+  & > p {
     margin-bottom: 3rem;
   }
 `;
+
+export const Ref = styled.a`
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  color: var(--primary-color);
+`;
+
+export const AboutMe = styled.article``;
 
 export const AboutMeHeading = styled.h3`
   font-size: calc(var(--fs-medium) + 2px);
@@ -52,8 +58,10 @@ export const List = styled.ul`
   font-size: calc(var(--fs-medium) - 3px);
   font-weight: var(--fw-medium);
   display: grid;
-  grid-template-columns: repeat(2, 14rem);
+  grid-template-columns: repeat(2, max-content);
   gap: 0 5rem;
+  width: min-content;
+  margin: 0 auto;
   margin-top: 1rem;
 
   @media (max-width: 350px) {

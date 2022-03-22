@@ -47,6 +47,10 @@ const ContactCard = () => {
         console.log(result.text);
         setSuccess(true);
         setLoading(false);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
       },
       (error) => {
         console.log(error);

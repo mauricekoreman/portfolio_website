@@ -13,6 +13,7 @@ import {
   Raster,
   HorizontalStairs,
   ShapesContainer,
+  Ref,
 } from "./aboutsection.styles";
 import { Paragraph } from "../../typography/paragraph/paragraph.styles";
 import raster from "../../../assets/img/raster.svg";
@@ -36,25 +37,33 @@ const AboutSection = () => (
         <TitleContainer>
           <HeadingSecondary headingText={"All About Me"} />
           <Paragraph>
-            My aspiration to live creativity and meet people’s actual needs when it comes to media
-            consumption led me to complete my Bachelor’s in Graphic Design.
+            Hi, my name is Maurice! I'm a problem solver with a positive and curious mindset. I
+            enjoy doing sports, partying (I'm also learning how to DJ), I have a love for gadgets
+            and anything that is electronic.
+          </Paragraph>
+          <Paragraph>
+            I have worked on designing and developing an app for the startup
+            <Ref href="https://onetwomodel.com/" target="_blank">
+              &nbsp;OneTwoModel&nbsp;
+            </Ref>
+            and work now as a lead developer and co-owner for
+            <Ref href="https://cstm-development.nl/" target="_blank">
+              &nbsp;CSTM
+            </Ref>
+            .
           </Paragraph>
         </TitleContainer>
 
         <AboutMe>
-          <AboutMeHeading>UX & Development</AboutMeHeading>
+          <AboutMeHeading>Developing, designing, creating</AboutMeHeading>
           <Paragraph>
-            My aspiration to live creativity and meet people’s actual needs when it comes to media
-            consumption led me to complete my Bachelor’s in Graphic Design.
-          </Paragraph>
-          <Paragraph>
-            My aspiration to live creativity and meet people’s actual needs when it comes to media
-            consumption led me to complete my Bachelor’s in Graphic Design consumption led me to
-            complete my Bachelor’s in consumption led me to complete my Bachelor’s in
+            Being able to build whatever I want on the web is what excites me. I have the most fun
+            with developing a design and to see it coming to life. When I build JavaScript driven
+            applications I pay attention to the details to deliver just the right user experience.
           </Paragraph>
           <SkillContainer>
             <div>
-              <Paragraph>Some technologies i use for my work</Paragraph>
+              <Paragraph>Here are some technologies I use for my projects</Paragraph>
               <List>
                 {technologiesList.map((j) => (
                   <ListItem key={j}>{j}</ListItem>
@@ -69,8 +78,6 @@ const AboutSection = () => (
       <Raster pattern={raster} />
       <HorizontalStairs pattern={stairs} />
     </ShapesContainer>
-    {/* <ShapesContainer> */}
-    {/* </ShapesContainer> */}
   </AboutSectionContainer>
 );
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import CV from "../../../assets/CV_mauricekoreman.pdf";
 import { FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi";
 import {
   Footer,
@@ -19,10 +19,10 @@ const iconStyles = {
 
 const Footersection = () => {
   const { pathname } = useLocation();
-  const [hashlink, setHashlink] = useState(true);
+  const [home, setHome] = useState(true);
 
   useEffect(() => {
-    pathname == "/" ? setHashlink(true) : setHashlink(false);
+    pathname == "/" ? setHome(true) : setHome(false);
   }, [pathname]);
 
   return (
@@ -33,10 +33,12 @@ const Footersection = () => {
             hello@mauricekoreman.nl
           </Mail>
           <nav>
-            {hashlink ? (
+            {home ? (
               <FooterNavList>
                 <li>
-                  <Link to="/projects">My Résumé</Link>
+                  <a href={CV} target={"_blank"}>
+                    My Résumé
+                  </a>
                 </li>
                 <li>
                   <Link to="/projects">My Projects</Link>
@@ -48,7 +50,9 @@ const Footersection = () => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/projects">My Résumé</Link>
+                  <a href={CV} target={"_blank"}>
+                    My Résumé
+                  </a>
                 </li>
                 <li>
                   <Link to="/#contact">Contact</Link>

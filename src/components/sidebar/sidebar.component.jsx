@@ -1,8 +1,9 @@
-import { HashLink } from "react-router-hash-link";
 import { Navbar, MenuItemList, MenuItem, Toggle, NavButton } from "./sidebar.styles.js";
 import { FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Backdrop from "../backdrop/backdrop.component.jsx";
+import CV from "../../assets/CV_mauricekoreman.pdf";
+import { Link } from "react-router-dom";
 
 const sidebarData = [
   {
@@ -12,17 +13,17 @@ const sidebarData = [
   },
   {
     title: "About",
-    path: "#about",
+    path: "/#about",
     cName: "menu-item",
   },
   {
     title: "Projects",
-    path: "#works",
+    path: "/#works",
     cName: "menu-item",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "/#contact",
     cName: "menu-item",
   },
 ];
@@ -62,12 +63,14 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => (
       <MenuItemList>
         {sidebarData.map((item, index) => (
           <MenuItem key={index}>
-            <HashLink smooth to={item.path} onClick={toggleSidebar}>
+            <Link to={item.path} onClick={toggleSidebar} replace>
               {item.title}
-            </HashLink>
+            </Link>
           </MenuItem>
         ))}
-        <NavButton isOutlined>Download Résumé</NavButton>
+        <a href={CV} target="_blank">
+          <NavButton isOutlined>See Résumé</NavButton>
+        </a>
       </MenuItemList>
     </MotionNavbar>
   </>

@@ -7,6 +7,7 @@ import {
   ProjectsContainer,
   ProjectsPage,
   ProjectTitle,
+  StyledArrow,
 } from "./AllProjectsPage.styles";
 
 import { projectInfo } from "../../projectsData";
@@ -21,7 +22,10 @@ const AllProjectsPage = () => {
 
   return (
     <ProjectsPage>
-      <HeadingPrimary headingText={"My Projects."} />
+      <div className="projectsPageHeaderContainer">
+        <StyledArrow onClick={() => navigate(-1)} />
+        <HeadingPrimary headingText={"My Projects"} />
+      </div>
       <ProjectsContainer>
         {projectInfo.map((e, i) => (
           <Project onClick={() => handleClick(e.projectTitle)} key={i}>

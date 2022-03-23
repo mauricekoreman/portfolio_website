@@ -7,16 +7,15 @@ import {
   Background,
 } from "./workssection.styles";
 
-import project1 from "../../../assets/img/website_placeholder1.webp";
-import project2 from "../../../assets/img/website_placeholder2.webp";
-
 import ProjectCard from "../../projectcard/projectcard.component";
 import CustomButton from "../../buttons/custom-button/custom-button.component";
+
+import { projectInfo } from "../../../projectsData";
 
 const Workssection = () => {
   const navigate = useNavigate();
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     navigate("/projects");
   };
 
@@ -25,8 +24,9 @@ const Workssection = () => {
       <Background>
         <StyledHeadingSecondary headingText={"Some Things That I've Built"} />
         <ProjectsContainer>
-          <ProjectCard alignment backgroundImage={project1} />
-          <ProjectCard alignment={false} backgroundImage={project2} />
+          {projectInfo.slice(0, 2).map((e, i) => (
+            <ProjectCard key={i} alignment={i % 2 ? false : true} project={e} />
+          ))}
         </ProjectsContainer>
       </Background>
       <ButtonContainer>

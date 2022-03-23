@@ -31,10 +31,13 @@ export const ProjectContent = styled.article`
   z-index: 3;
   color: #fff;
   background-color: var(--primary-color);
+  align-self: center;
   margin: 3rem 0 0 0;
   padding: 2rem 0 4rem 0;
 
   @media ${device.desktop} {
+    padding: 0;
+    margin: 0;
     grid-column: ${({ alignment }) => (alignment ? "9 / -1" : "1 / 5")};
     grid-row: 1;
     display: flex;
@@ -44,7 +47,7 @@ export const ProjectContent = styled.article`
 `;
 
 export const AccentTitle = styled.span`
-  letter-spacing: 1.5px;
+  letter-spacing: 0.3rem;
   font-size: calc(var(--fs-small) - 2px);
 `;
 
@@ -53,6 +56,10 @@ export const ProjectTitle = styled.h3`
   font-weight: var(--fw-medium);
   letter-spacing: 1px;
   margin: 1rem 0 2rem 0;
+
+  @media ${device.desktop} {
+    text-align: ${({ alignment }) => (alignment ? "right" : "left")};
+  }
 `;
 
 export const ProjectDescription = styled.p`

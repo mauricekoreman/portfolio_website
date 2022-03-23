@@ -1,9 +1,18 @@
 import styled from "styled-components";
-import { device } from "../../breakpoints";
+import { FiArrowLeft } from "react-icons/fi";
 
 export const ProjectsPage = styled.main`
   text-align: center;
   position: relative;
+
+  & > .projectsPageHeaderContainer {
+    max-width: 130rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ProjectsContainer = styled.section`
@@ -32,6 +41,7 @@ export const ProjectImage = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 2rem;
 
   &::after {
     content: "";
@@ -64,4 +74,15 @@ export const ProjectTitle = styled.h3`
   opacity: 0;
   color: #fff;
   transition: 0.3s;
+`;
+
+export const StyledArrow = styled(FiArrowLeft)`
+  font-size: 5rem;
+  stroke-width: 1.5px;
+  position: absolute;
+  left: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

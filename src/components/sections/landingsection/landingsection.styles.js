@@ -49,6 +49,10 @@ export const ButtonsContainer = styled.div`
   margin: 4rem 0 8rem 0;
   width: 100%;
 
+  & > a {
+    width: 100%;
+  }
+
   @media ${device.mobileLarge} {
     display: flex;
     gap: 2rem;
@@ -58,7 +62,8 @@ export const ButtonsContainer = styled.div`
     margin-bottom: 1rem;
   }
 
-  & > button {
+  & > button,
+  & > a {
     @media ${device.mobileLarge} {
       width: unset;
     }

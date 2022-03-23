@@ -28,7 +28,7 @@ const LandingSection = () => {
             bottomText={"And I Love Webdevelopment"}
           />
           <StyledParagraph margin={"2rem 0 "}>
-            I'm a frontend webdeveloper located in The Netherlands. I like like to build (and
+            I'm a frontend webdeveloper living in The Netherlands. I like like to build (and
             sometimes design) great digital experiences.
           </StyledParagraph>
           <ButtonsContainer>

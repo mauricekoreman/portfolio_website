@@ -3,14 +3,17 @@ import { useNavigate } from "react-router-dom";
 
 import NotFoundPage from "../../pages/notFoundPage/not-fount-page.component";
 import { getProject } from "../../projectsData";
+import { SkillItem, SkillList } from "../projectcard/projectcard.styles";
 import Footersection from "../sections/footersection/footersection.component";
 import HeadingSecondary from "../typography/heading-secondary/heading-secondary.component";
 import { Paragraph } from "../typography/paragraph/paragraph.styles";
 import {
+  CustomSkillItem,
   HeadingContainer,
   OuterContainer,
   ProjectContainer,
   ProjectImg,
+  ProjectWebsite,
   StyledArrow,
 } from "./project.styles";
 
@@ -19,13 +22,33 @@ const Project = () => {
   let params = useParams();
   let project = getProject(params.project);
 
+  const paragraphArr = project.longDesc.split("\n");
+
   return project ? (
     <>
       <OuterContainer>
         <ProjectContainer>
-          <HeadingSecondary headingText={project.projectTitle} />
+          <HeadingContainer>
+            <StyledArrow onClick={() => navigate(-1)} />
+            <HeadingSecondary headingText={project.projectTitle} />
+          </HeadingContainer>
           <ProjectImg src={project.img} />
-          <Paragraph>{project.projectDesc}</Paragraph>
+          <ProjectWebsite href={project.website} target="_blank">
+            {project.website}
+          </ProjectWebsite>
+          <SkillList>
+            {project.technologies.map((e, i) => (
+              <CustomSkillItem key={i}>{e}</CustomSkillItem>
+            ))}
+          </SkillList>
+          <div>
+            {paragraphArr.map((e, i) => (
+              <>
+                <Paragraph key={i}>{e}</Paragraph>
+                <br />
+              </>
+            ))}
+          </div>
         </ProjectContainer>
       </OuterContainer>
       <Footersection />

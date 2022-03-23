@@ -52,6 +52,7 @@ export const ButtonContainer = styled.button`
   font-family: "Raleway";
   font-weight: var(--fw-medium);
   cursor: pointer;
+  transition: background-color 0.1s ease, color 0.2s ease;
 
   ${getButtonStyles}
 `;

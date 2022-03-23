@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FiArrowLeft } from "react-icons/fi";
 import { SkillItem } from "../projectcard/projectcard.styles";
+import { device } from "../../breakpoints";
 
 export const OuterContainer = styled.main`
   padding: 0 var(--inner-content);
@@ -26,16 +27,27 @@ export const HeadingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${device.mobileLarge} {
+    & > div {
+      padding: 0 7rem;
+    }
+  }
 `;
 
 export const StyledArrow = styled(FiArrowLeft)`
-  font-size: 5rem;
-  stroke-width: 1.5px;
-  position: absolute;
-  left: 0;
+  display: none;
 
-  &:hover {
-    cursor: pointer;
+  @media ${device.mobileLarge} {
+    display: inline-block;
+    font-size: 5rem;
+    stroke-width: 1.5px;
+    position: absolute;
+    left: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

@@ -1,9 +1,10 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import NotFoundPage from "../../pages/notFoundPage/not-fount-page.component";
 import { getProject } from "../../projectsData";
-import { SkillItem, SkillList } from "../projectcard/projectcard.styles";
+import { SkillList } from "../projectcard/projectcard.styles";
 import Footersection from "../sections/footersection/footersection.component";
 import HeadingSecondary from "../typography/heading-secondary/heading-secondary.component";
 import { Paragraph } from "../typography/paragraph/paragraph.styles";
@@ -43,10 +44,10 @@ const Project = () => {
           </SkillList>
           <div>
             {paragraphArr.map((e, i) => (
-              <>
-                <Paragraph key={i}>{e}</Paragraph>
+              <React.Fragment key={i}>
+                <Paragraph>{e}</Paragraph>
                 <br />
-              </>
+              </React.Fragment>
             ))}
           </div>
         </ProjectContainer>

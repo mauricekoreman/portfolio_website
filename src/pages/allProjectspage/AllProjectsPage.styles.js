@@ -1,33 +1,33 @@
 import styled from "styled-components";
 import { FiArrowLeft } from "react-icons/fi";
+import { device } from "../../breakpoints";
 
 export const ProjectsPage = styled.main`
   text-align: center;
   position: relative;
-
-  & > .projectsPageHeaderContainer {
-    max-width: 130rem;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 export const ProjectsContainer = styled.section`
   max-width: 130rem;
   margin: 0 auto;
   padding: 10rem 1rem;
+  grid-template-columns: repeat(auto-fit, 30rem);
   display: grid;
-  grid-template-columns: repeat(auto-fit, 40rem);
   gap: 4rem;
   justify-content: center;
+
+  @media ${device.mobileLarge} {
+    grid-template-columns: repeat(auto-fit, 40rem);
+  }
 `;
 
 export const Project = styled.article`
   position: relative;
-  width: 40rem;
+  width: 30rem;
+
+  @media ${device.mobileLarge} {
+    width: 40rem;
+  }
 `;
 
 export const ProjectImage = styled.div`
@@ -74,15 +74,4 @@ export const ProjectTitle = styled.h3`
   opacity: 0;
   color: #fff;
   transition: 0.3s;
-`;
-
-export const StyledArrow = styled(FiArrowLeft)`
-  font-size: 5rem;
-  stroke-width: 1.5px;
-  position: absolute;
-  left: 0;
-
-  &:hover {
-    cursor: pointer;
-  }
 `;

@@ -15,7 +15,7 @@ export function scrollTo(location) {
   if (location) {
     let element = document.getElementById(location.hash.slice(1));
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   } else {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

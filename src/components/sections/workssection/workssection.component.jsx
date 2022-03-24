@@ -25,7 +25,12 @@ const Workssection = () => {
         <StyledHeadingSecondary headingText={"Some Things That I've Built"} />
         <ProjectsContainer>
           {projectInfo.slice(0, 2).map((e, i) => (
-            <ProjectCard key={i} alignment={i % 2 ? false : true} project={e} />
+            <ProjectCard
+              key={i}
+              onClick={() => navigate(`/projects/${e.projectTitle}`)}
+              alignment={i % 2 ? false : true}
+              project={e}
+            />
           ))}
         </ProjectsContainer>
       </Background>

@@ -10,6 +10,7 @@ import {
 } from "./AllProjectsPage.styles";
 
 import { projectInfo } from "../../projectsData";
+import ScrollToTop from "../../components/scrollToTop/scrollToTop.component";
 
 const AllProjectsPage = () => {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const AllProjectsPage = () => {
 
   return (
     <ProjectsPage>
+      <ScrollToTop />
       <HeadingPrimary headingText={"My Projects"} />
       <ProjectsContainer>
         {projectInfo.map((e, i) => (

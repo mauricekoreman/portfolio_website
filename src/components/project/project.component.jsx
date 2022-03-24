@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import NotFoundPage from "../../pages/notFoundPage/not-fount-page.component";
 import { getProject } from "../../projectsData";
 import { SkillList } from "../projectcard/projectcard.styles";
+import ScrollToTop from "../scrollToTop/scrollToTop.component";
 import Footersection from "../sections/footersection/footersection.component";
 import HeadingSecondary from "../typography/heading-secondary/heading-secondary.component";
 import { Paragraph } from "../typography/paragraph/paragraph.styles";
@@ -28,6 +29,7 @@ const Project = () => {
   return project ? (
     <>
       <OuterContainer>
+        <ScrollToTop />
         <ProjectContainer>
           <HeadingContainer>
             <StyledArrow onClick={() => navigate(-1)} />

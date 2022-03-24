@@ -5,7 +5,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Homepage from "./pages/homepage/homepage.component";
 import HeaderSection from "./components/sections/headersection/headersection.componenx";
 import AllProjectsPage from "./pages/allProjectspage/AllProjectsPage.component";
-import ScrollToTop, { scrollTo } from "./components/scrollToTop/scrollToTop.component";
+import { scrollTo } from "./components/scrollToTop/scrollToTop.component";
 import Project from "./components/project/project.component";
 import NotFoundPage from "./pages/notFoundPage/not-fount-page.component";
 
@@ -19,7 +19,6 @@ const App = () => {
   return (
     <>
       <HeaderSection />
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/projects" element={<AllProjectsPage />} />

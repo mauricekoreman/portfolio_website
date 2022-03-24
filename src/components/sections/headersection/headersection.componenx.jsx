@@ -12,7 +12,6 @@ const HeaderSection = () => {
 
   useEffect(() => {
     location.pathname !== "/" ? setBg(false) : setBg(true);
-    console.log("fired!");
   }, [location]);
 
   return (

@@ -22,6 +22,10 @@ export const ProjectImage = styled.div`
   z-index: 1;
   aspect-ratio: 16 / 9;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media ${device.desktop} {
     grid-column: ${({ alignment }) => (alignment ? "1 / 8" : "6 / -1")};
   }

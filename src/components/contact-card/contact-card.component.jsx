@@ -30,6 +30,7 @@ const ContactCard = () => {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
+  const [disabled, setDisabled] = useState(false);
 
   let templateParams = {
     from_name: name,
@@ -40,6 +41,7 @@ const ContactCard = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setDisabled(true);
 
     setLoading(true);
     emailjs.send("portfolioform", "template_contact", templateParams, "RqmwKpIqKFAs96gv0").then(
@@ -51,6 +53,7 @@ const ContactCard = () => {
         setEmail("");
         setSubject("");
         setMessage("");
+        setDisabled(false);
       },
       (error) => {
         console.log(error);
@@ -60,7 +63,6 @@ const ContactCard = () => {
     );
 
     setSuccess(false);
-    setLoading(true);
     setErrMsg("");
   }
 
@@ -96,6 +98,7 @@ const ContactCard = () => {
             type="text"
             name="contact_name"
             onChange={(e) => setName(e.target.value)}
+            value={name}
             placeholder="Your name"
           />
         </InputContainer>
@@ -107,6 +110,7 @@ const ContactCard = () => {
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
+            value={email}
           />
         </InputContainer>
 
@@ -116,6 +120,7 @@ const ContactCard = () => {
             type="text"
             onChange={(e) => setSubject(e.target.value)}
             placeholder="What's the topic?"
+            value={subject}
           />
         </InputContainer>
 
@@ -127,11 +132,12 @@ const ContactCard = () => {
             type="text"
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Tell me.. :D"
+            value={message}
           />
         </InputContainer>
 
         <InputContainer>
-          <StyledButton isOutlined type="submit">
+          <StyledButton disabled={disabled} isOutlined type="submit">
             Send it!
           </StyledButton>
         </InputContainer>

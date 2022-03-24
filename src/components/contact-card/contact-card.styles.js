@@ -200,6 +200,11 @@ export const StyledButton = styled(CustomButton)`
   height: 4rem;
   opacity: 0.8;
 
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   @media ${device.desktop} {
     width: 70%;
   }

@@ -73,13 +73,14 @@ export const ListItem = styled.li`
   padding-left: 1.5rem;
   margin-top: 1rem;
   position: relative;
+  display: flex;
+  align-items: center;
 
   &::before {
     content: "▹";
     position: absolute;
     left: 0;
     font-size: var(--fs-medium);
-    line-height: 1.6rem;
     color: var(--primary-color);
   }
 `;

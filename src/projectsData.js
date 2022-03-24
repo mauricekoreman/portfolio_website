@@ -6,8 +6,7 @@ export const projectInfo = [
   {
     projectTitle: "CSTM Website",
     img: CSTM,
-    shortDesc:
-      "The website of CSTM, a webdevelopment company that I co-founded with some two friends.",
+    shortDesc: "The website of CSTM, a webdevelopment company that I co-founded with two friends.",
     longDesc:
       "CSTM (Pronounced 'custom') is a young company that was founded by me and two friends. It's mission is to provide CSTM-made web and app development for an affordable price. Our first project was ofcourse our own website. We designed it from scratch and built it with React.",
     technologies: ["React", "Sass", "Framer Motion"],

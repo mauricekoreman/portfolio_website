@@ -37,7 +37,7 @@ const Footersection = () => {
               <FooterNavList>
                 <li>
                   <a href={CV} target={"_blank"}>
-                    My Résumé
+                    My Resume
                   </a>
                 </li>
                 <li>
@@ -51,7 +51,7 @@ const Footersection = () => {
                 </li>
                 <li>
                   <a href={CV} target={"_blank"}>
-                    My Résumé
+                    My Resume
                   </a>
                 </li>
                 <li>

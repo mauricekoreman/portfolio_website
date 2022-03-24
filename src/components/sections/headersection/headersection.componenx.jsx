@@ -5,7 +5,7 @@ import Menu from "../../menu/menu.component";
 
 import { HeaderContainer } from "./headersection.styles";
 
-const HeaderSection = () => {
+const HeaderSection = ({ imgColor }) => {
   const [bg, setBg] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();

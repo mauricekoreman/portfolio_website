@@ -69,7 +69,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => (
           </MenuItem>
         ))}
         <a href={CV} target="_blank">
-          <NavButton isOutlined>See Résumé</NavButton>
+          <NavButton isOutlined>See Resume</NavButton>
         </a>
       </MenuItemList>
     </MotionNavbar>

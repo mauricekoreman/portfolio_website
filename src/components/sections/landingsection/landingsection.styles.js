@@ -101,6 +101,7 @@ export const Image = styled.img`
   width: 90%;
   object-fit: contain;
   z-index: 3;
+  filter: brightness(107%);
 
   @media ${device.mobileLarge} {
     height: 80%;

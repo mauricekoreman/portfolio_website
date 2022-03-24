@@ -9,7 +9,7 @@ import {
   Content,
 } from "./landingsection.styles";
 
-import sexy from "../../../assets/img/Profile picture.jpg";
+import sexy from "../../../assets/img/sexy.jpg";
 import CV from "../../../assets/CV_mauricekoreman.pdf";
 
 import HeadingPrimary from "../../typography/heading-primary/heading-primary.component";
@@ -19,7 +19,7 @@ const LandingSection = () => {
   const navigate = useNavigate();
 
   return (
-    <LandingSectionContainer>
+    <LandingSectionContainer id="landing">
       <Content>
         <div>
           <HeadingPrimary
@@ -28,13 +28,13 @@ const LandingSection = () => {
             bottomText={"And I Love Webdevelopment"}
           />
           <StyledParagraph margin={"2rem 0 "}>
-            I'm a frontend webdeveloper living in The Netherlands. I like like to build (and
-            sometimes design) great digital experiences.
+            I'm a frontend webdeveloper living in The Netherlands. I like to build (and sometimes
+            design) great digital experiences.
           </StyledParagraph>
           <ButtonsContainer>
             <CustomButton onClick={() => navigate("/#works")}>What I've Built</CustomButton>
             <a href={CV} target={"_blank"}>
-              <CustomButton isOutlined>See Résumé</CustomButton>
+              <CustomButton isOutlined>See Resume</CustomButton>
             </a>
           </ButtonsContainer>
         </div>

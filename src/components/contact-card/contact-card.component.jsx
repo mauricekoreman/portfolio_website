@@ -59,6 +59,7 @@ const ContactCard = () => {
         console.log(error);
         setErrMsg("Something went wrong...");
         setLoading(false);
+        setDisabled(false);
       }
     );
 

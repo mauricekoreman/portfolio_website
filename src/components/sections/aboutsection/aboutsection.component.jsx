@@ -37,8 +37,8 @@ const AboutSection = () => (
         <TitleContainer>
           <HeadingSecondary headingText={"All About Me"} />
           <Paragraph>
-            Hi, my name is Maurice! I'm a problem solver with a positive and curious mindset. I
-            enjoy doing sports, partying (I'm also learning how to DJ), I have a love for gadgets
+            Hi, my name is Maurice! I am solution oriented and have a positive and curious mindset.
+            I enjoy doing sports, partying (I'm also learning how to DJ), I have a love for gadgets
             and anything that is electronic.
           </Paragraph>
           <Paragraph>
@@ -46,7 +46,7 @@ const AboutSection = () => (
             <Ref href="https://onetwomodel.com/" target="_blank">
               &nbsp;OneTwoModel&nbsp;
             </Ref>
-            and work now as a lead developer and co-owner for
+            and now work as the lead developer and co-owner for
             <Ref href="https://cstm-development.nl/" target="_blank">
               &nbsp;CSTM
             </Ref>
@@ -55,11 +55,12 @@ const AboutSection = () => (
         </TitleContainer>
 
         <AboutMe>
-          <AboutMeHeading>Developing, designing, creating</AboutMeHeading>
+          <AboutMeHeading>Developing, designing, creating.</AboutMeHeading>
           <Paragraph>
             Being able to build whatever I want on the web is what excites me. I have the most fun
-            with developing a design and to see it coming to life. When I build JavaScript driven
-            applications I pay attention to the details to deliver just the right user experience.
+            with developing a design (UI) and to see it coming to life. When I build JavaScript
+            driven applications I pay attention to the details to deliver just the right user
+            experience (UX).
           </Paragraph>
           <SkillContainer>
             <div>

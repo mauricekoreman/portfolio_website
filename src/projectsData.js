@@ -1,6 +1,8 @@
 import CSTM from "./assets/img/CSTM_project.jpg";
 import OTM from "./assets/img/OneTwoModel_project.jpg";
 import portfolio from "./assets/img/Portfolio_project.jpg";
+import postnl from "./assets/img/PostNL_project.jpg";
+import athalos from "./assets/img/athalos_project.jpg";
 
 export const projectInfo = [
   {
@@ -29,6 +31,26 @@ export const projectInfo = [
     longDesc: "The portfolio website you're on right now!",
     technologies: ["React", "Styled Components"],
     website: "https://mauricekoreman.nl",
+  },
+  {
+    projectTitle: "PostNL Machine Learning Explainability",
+    img: postnl,
+    shortDesc:
+      "A project with PostNL where we had to give better insights in how their package checking machine learning algorithm made it's decisions.",
+    longDesc:
+      "During my second phase of the minor 'Data Science For Business Improvement' I did at the Hague Univerisy of Applied Sciences, my group had the opportunity to work together with PostNL. The project was about giving a better insight in how their machine learning algorithm made it's decisions. Based on what factors. We decided to use the library 'LIME'. This is a library that helps us explain what machine learning classifiers are doing by showing us what variables have an impact on the decision and what the importance is of the variable. The dataframes and algorithm of PostNL was built with the H2O module.",
+    technologies: ["Python", "H2O", "LIME", "pandas", "Jupyter Notebooks"],
+    website: "",
+  },
+  {
+    projectTitle: "Athalos PWA",
+    img: athalos,
+    shortDesc:
+      "With the CSTM team we have worked on developing service portal PWA for Athalos, a global communication service provider.",
+    longDesc:
+      "The business, CSTM, that I own got hired to develop a progressive web application (PWA) for the company Athalos, a global communication service provider located in The Netherlands. We created an application which functions as a portal where customers can login to see and manage the services they have at the Athalos company. The designs and front-end implementation is completely designed and built by the CSTM team.",
+    technologies: ["React", "Node/Express", "PWA"],
+    website: "https://www.athalos.com/",
   },
 ];
 

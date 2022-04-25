@@ -21,12 +21,15 @@ import stairs from "../../../assets/img/stairs.svg";
 import circles from "../../../assets/img/circles.svg";
 
 const technologiesList = [
-  "JavaScript",
-  "Adobe XD",
+  "HTML / CSS (Sass)",
   "ReactJS",
+  "Javascript",
   "React Native",
-  "HTML/CSS/Sass",
+  "Adobe XD",
+  "Node / Express",
   "Wordpress",
+  "MongoDB",
+  "Git",
   "Firebase",
 ];
 
@@ -64,7 +67,7 @@ const AboutSection = () => (
           </Paragraph>
           <SkillContainer>
             <div>
-              <Paragraph>Here are some technologies I use for my projects</Paragraph>
+              <Paragraph>An overview of techniques I use for my projects:</Paragraph>
               <List>
                 {technologiesList.map((j) => (
                   <ListItem key={j}>{j}</ListItem>

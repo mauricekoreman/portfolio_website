@@ -48,7 +48,7 @@ export const projectInfo = [
     shortDesc:
       "With the CSTM team we have worked on developing service portal PWA for Athalos, a global communication service provider.",
     longDesc:
-      "The business, CSTM, that I own got hired to develop a progressive web application (PWA) for the company Athalos, a global communication service provider located in The Netherlands. We created an application which functions as a portal where customers can login to see and manage the services they have at the Athalos company. The designs and front-end implementation is completely designed and built by the CSTM team.",
+      "CSTM, the company that I founded with two friends, got hired to develop a progressive web application (PWA) for the company Athalos, a global communication service provider located in The Netherlands. We created an application which functions as a portal where customers can login to see and manage the services they have at Athalos. The designs and front-end implementation are completely designed and built by the CSTM team.",
     technologies: ["React", "Node/Express", "PWA"],
     website: "https://www.athalos.com/",
   },

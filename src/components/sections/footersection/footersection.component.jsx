@@ -22,40 +22,40 @@ const Footersection = () => {
   const [home, setHome] = useState(true);
 
   useEffect(() => {
-    pathname == "/" ? setHome(true) : setHome(false);
+    pathname === "/" ? setHome(true) : setHome(false);
   }, [pathname]);
 
   return (
     <Footer>
       <FooterContainer>
         <FooterFlex>
-          <Mail href="mailto:hello@mauricekoreman.nl" taget="_blank">
+          <Mail href='mailto:hello@mauricekoreman.nl' taget='_blank'>
             hello@mauricekoreman.nl
           </Mail>
           <nav>
             {home ? (
               <FooterNavList>
                 <li>
-                  <a href={CV} target={"_blank"}>
+                  <a href={CV} rel='noreferrer' target={"_blank"}>
                     My Resume
                   </a>
                 </li>
                 <li>
-                  <Link to="/projects">My Projects</Link>
+                  <Link to='/projects'>My Projects</Link>
                 </li>
               </FooterNavList>
             ) : (
               <FooterNavList>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li>
-                  <a href={CV} target={"_blank"}>
+                  <a href={CV} rel='noreferrer' target={"_blank"}>
                     My Resume
                   </a>
                 </li>
                 <li>
-                  <Link to="/#contact">Contact</Link>
+                  <Link to='/#contact'>Contact</Link>
                 </li>
               </FooterNavList>
             )}
@@ -64,13 +64,13 @@ const Footersection = () => {
         <FooterBottom>
           <p>© Maurice Koreman 2022</p>
           <SocialsContainer>
-            <a href="https://www.instagram.com/mauricekoreman/" target="_blank">
+            <a href='https://www.instagram.com/mauricekoreman/' rel='noreferrer' target='_blank'>
               <FiInstagram {...iconStyles} />
             </a>
-            <a href="https://www.linkedin.com/in/mauricekoreman/" target="_blank">
+            <a href='https://www.linkedin.com/in/mauricekoreman/' rel='noreferrer' target='_blank'>
               <FiLinkedin {...iconStyles} />
             </a>
-            <a href="https://github.com/mauricekoreman" target="_blank">
+            <a href='https://github.com/mauricekoreman' target='_blank' rel='noreferrer'>
               <FiGithub {...iconStyles} />
             </a>
           </SocialsContainer>

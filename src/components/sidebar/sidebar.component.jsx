@@ -18,7 +18,7 @@ const sidebarData = [
   },
   {
     title: "Projects",
-    path: "/#works",
+    path: "/projects",
     cName: "menu-item",
   },
   {

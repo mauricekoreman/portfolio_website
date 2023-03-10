@@ -22,19 +22,20 @@ import circles from "../../../assets/img/circles.svg";
 
 const technologiesList = [
   "HTML / CSS (Sass)",
-  "ReactJS",
+  "Tailwind",
+  "React",
   "Javascript",
   "React Native",
-  "Adobe XD",
+  "Typescript",
   "Node / Express",
-  "Wordpress",
   "MongoDB",
-  "Git",
   "Firebase",
+  "Figma",
+  "Git",
 ];
 
 const AboutSection = () => (
-  <AboutSectionContainer id="about">
+  <AboutSectionContainer id='about'>
     <ShapesContainer>
       <Content>
         <TitleContainer>
@@ -45,15 +46,15 @@ const AboutSection = () => (
             and anything that is electronic.
           </Paragraph>
           <Paragraph>
-            I have worked on designing and developing an app for the startup
-            <Ref href="https://onetwomodel.com/" target="_blank">
-              &nbsp;OneTwoModel&nbsp;
+            I have worked as lead developer and co-owner for the startup
+            <Ref href='https://cstm-development.nl/' target='_blank'>
+              &nbsp;CSTM&nbsp;
             </Ref>
-            and now work as the lead developer and co-owner for
-            <Ref href="https://cstm-development.nl/" target="_blank">
-              &nbsp;CSTM
+            and now work as a front-end developer at
+            <Ref href='https://www.foleon.com/' target='_blank'>
+              &nbsp;Foleon.&nbsp;
             </Ref>
-            .
+            Besides work projects I have my own projects going that I use to learn new technologies.
           </Paragraph>
         </TitleContainer>
 
@@ -77,7 +78,7 @@ const AboutSection = () => (
           </SkillContainer>
         </AboutMe>
       </Content>
-      <Circles className="boi" pattern={circles} />
+      <Circles className='boi' pattern={circles} />
       <Stairs pattern={stairs} />
       <Raster pattern={raster} />
       <HorizontalStairs pattern={stairs} />

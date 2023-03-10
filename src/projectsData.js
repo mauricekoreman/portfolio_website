@@ -1,10 +1,21 @@
-import CSTM from "./assets/img/CSTM_project.jpg";
-import OTM from "./assets/img/OneTwoModel_project.jpg";
-import portfolio from "./assets/img/Portfolio_project.jpg";
-import postnl from "./assets/img/PostNL_project.jpg";
-import athalos from "./assets/img/athalos_project.jpg";
+import CSTM from "./assets/img/CSTM_project.webp";
+import OTM from "./assets/img/OneTwoModel_project.webp";
+import portfolio from "./assets/img/Portfolio_project.webp";
+import postnl from "./assets/img/PostNL_project.webp";
+import athalos from "./assets/img/athalos_project.webp";
+import couponme from "./assets/img/couponme_project.webp";
 
 export const projectInfo = [
+  {
+    projectTitle: "CouponMe",
+    img: couponme,
+    shortDesc:
+      "A progressive webapp (PWA) where you can link with another usr and give each other customized relationship coupons to create activities for each other.",
+    longDesc:
+      "The idea was to create an app where the user can link with their partner to create fun (romantic) activities that you gift each other. The idea is that if your partner uses one of the coupons you created, it has to be fulfilled at that moment. This way you can give each other something fun or special like a night out, massages, or whatever you want to do to have fun in the relationship.",
+    technologies: ["React Typescript", "Tailwind", "Firebase"],
+    website: "https://couponme.netlify.app/",
+  },
   {
     projectTitle: "CSTM Website",
     img: CSTM,

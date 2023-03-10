@@ -9,7 +9,7 @@ import {
   Content,
 } from "./landingsection.styles";
 
-import sexy from "../../../assets/img/sexy.jpg";
+import sexy from "../../../assets/img/sexy.webp";
 import CV from "../../../assets/CV_mauricekoreman.pdf";
 
 import HeadingPrimary from "../../typography/heading-primary/heading-primary.component";
@@ -19,7 +19,7 @@ const LandingSection = () => {
   const navigate = useNavigate();
 
   return (
-    <LandingSectionContainer id="landing">
+    <LandingSectionContainer id='landing'>
       <Content>
         <div>
           <HeadingPrimary
@@ -33,14 +33,14 @@ const LandingSection = () => {
           </StyledParagraph>
           <ButtonsContainer>
             <CustomButton onClick={() => navigate("/#works")}>What I've Built</CustomButton>
-            <a href={CV} target={"_blank"}>
+            <a href={CV} target={"_blank"} rel='noreferrer'>
               <CustomButton isOutlined>See Resume</CustomButton>
             </a>
           </ButtonsContainer>
         </div>
         <ImageContainer>
           <Frame />
-          <Image src={sexy} alt="Maurice profile picture" />
+          <Image src={sexy} alt='Maurice profile picture' />
         </ImageContainer>
       </Content>
     </LandingSectionContainer>

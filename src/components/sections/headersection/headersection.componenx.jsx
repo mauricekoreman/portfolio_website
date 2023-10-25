@@ -16,10 +16,11 @@ const HeaderSection = ({ imgColor }) => {
 
   return (
     <HeaderContainer bg={bg}>
-      <img onClick={() => navigate("/")} src={Logo} />
+      <img onClick={() => navigate("/")} src={Logo} alt='mauricekoreman.nl logo' />
       <Menu bg={bg} />
     </HeaderContainer>
   );
 };
 
 export default HeaderSection;
+

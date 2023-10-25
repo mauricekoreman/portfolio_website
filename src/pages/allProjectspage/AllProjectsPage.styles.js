@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FiArrowLeft } from "react-icons/fi";
 import { device } from "../../breakpoints";
 
 export const ProjectsPage = styled.main`

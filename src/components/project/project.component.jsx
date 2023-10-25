@@ -36,7 +36,7 @@ const Project = () => {
             <HeadingSecondary headingText={project.projectTitle} />
           </HeadingContainer>
           <ProjectImg src={project.img} />
-          <ProjectWebsite href={project.website} target="_blank">
+          <ProjectWebsite href={project.website} target='_blank' rel='noreferrer'>
             {project.website}
           </ProjectWebsite>
           <SkillList>
@@ -62,3 +62,4 @@ const Project = () => {
 };
 
 export default Project;
+

@@ -58,7 +58,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => (
       animate={showSidebar ? "visible" : "hidden"}
     >
       <Toggle onClick={toggleSidebar}>
-        <FiX color="white" size={40} strokeWidth={1} />
+        <FiX color='white' size={40} strokeWidth={1} />
       </Toggle>
       <MenuItemList>
         {sidebarData.map((item, index) => (
@@ -68,7 +68,7 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => (
             </Link>
           </MenuItem>
         ))}
-        <a href={CV} target="_blank">
+        <a href={CV} target='_blank' rel='noreferrer'>
           <NavButton isOutlined>See Resume</NavButton>
         </a>
       </MenuItemList>
@@ -77,3 +77,4 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => (
 );
 
 export default Sidebar;
+

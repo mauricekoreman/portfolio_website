@@ -18,11 +18,12 @@ export const HeadingLine = styled.h2`
   font-size: var(--fs-large);
   font-weight: var(--fw-regular);
   color: ${({ color }) => (color ? color : "black")};
-  opacity: ${({ color }) => (color == "white" ? 1 : 0.73)};
+  opacity: ${({ color }) => (color === "white" ? 1 : 0.73)};
 `;
 
 export const TopHeader = styled.span`
   color: ${({ color }) => (color ? color : "var(--accent-color);")};
   font-size: var(--fs-medium);
   font-weight: var(--fw-bold);
+
 `;

@@ -1,10 +1,4 @@
-import {
-  TopHeaderContainer,
-  Line,
-  TopHeader,
-  HeadingLine,
-  BottomText,
-} from "./heading-primary.styles";
+import { TopHeaderContainer, TopHeader, HeadingLine, BottomText } from "./heading-primary.styles";
 
 const HeadingPrimary = ({ headingText, topText, bottomText }) => {
   let textArr = headingText.split("\n").map((e, i) => <HeadingLine key={i}>{e}</HeadingLine>);
@@ -12,7 +6,6 @@ const HeadingPrimary = ({ headingText, topText, bottomText }) => {
   return (
     <div>
       <TopHeaderContainer>
-        {/* <Line /> */}
         <TopHeader>{topText}</TopHeader>
       </TopHeaderContainer>
       {textArr}
@@ -22,3 +15,4 @@ const HeadingPrimary = ({ headingText, topText, bottomText }) => {
 };
 
 export default HeadingPrimary;
+

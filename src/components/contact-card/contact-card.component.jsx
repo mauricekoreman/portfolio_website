@@ -74,19 +74,19 @@ const ContactCard = () => {
           topColor={"rgba(0, 0, 0, .31)"}
           headingText={"Send Me A \n Message!"}
         />
-        <Mail href="mailto:hello@mauricekoreman.nl" taget="_blank">
+        <Mail href='mailto:hello@mauricekoreman.nl' taget='_blank' rel='noreferrer'>
           hello@mauricekoreman.nl
         </Mail>
         <SocialsContainer>
           <p>Find me</p>
 
-          <a href="https://www.instagram.com/mauricekoreman/" target="_blank">
+          <a href='https://www.instagram.com/mauricekoreman/' target='_blank' rel='noreferrer'>
             <FiInstagram {...iconStyles} />
           </a>
-          <a href="https://www.linkedin.com/in/mauricekoreman/" target="_blank">
+          <a href='https://www.linkedin.com/in/mauricekoreman/' target='_blank' rel='noreferrer'>
             <FiLinkedin {...iconStyles} />
           </a>
-          <a href="https://github.com/mauricekoreman" target="_blank">
+          <a href='https://github.com/mauricekoreman' target='_blank' rel='noreferrer'>
             <FiGithub {...iconStyles} />
           </a>
         </SocialsContainer>
@@ -96,11 +96,11 @@ const ContactCard = () => {
           <Label>Name</Label>
           <TextInput
             required
-            type="text"
-            name="contact_name"
+            type='text'
+            name='contact_name'
             onChange={(e) => setName(e.target.value)}
             value={name}
-            placeholder="Your name"
+            placeholder='Your name'
           />
         </InputContainer>
 
@@ -108,9 +108,9 @@ const ContactCard = () => {
           <Label>Email</Label>
           <TextInput
             required
-            type="email"
+            type='email'
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="your@email.com"
+            placeholder='your@email.com'
             value={email}
           />
         </InputContainer>
@@ -118,7 +118,7 @@ const ContactCard = () => {
         <InputContainer>
           <Label>Subject</Label>
           <TextInput
-            type="text"
+            type='text'
             onChange={(e) => setSubject(e.target.value)}
             placeholder="What's the topic?"
             value={subject}
@@ -129,16 +129,16 @@ const ContactCard = () => {
           <Label>Your message</Label>
           <TextAreaInput
             required
-            as="textarea"
-            type="text"
+            as='textarea'
+            type='text'
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Tell me.. :D"
+            placeholder='Tell me.. :D'
             value={message}
           />
         </InputContainer>
 
         <InputContainer>
-          <StyledButton disabled={disabled} isOutlined type="submit">
+          <StyledButton disabled={disabled} isOutlined type='submit'>
             Send it!
           </StyledButton>
         </InputContainer>
@@ -147,10 +147,13 @@ const ContactCard = () => {
             <Spinner height={"3rem"} width={"3rem"} borderWidth={"3px"} success={success} />
           )}
         </AnimatePresence>
-        {errMsg && <p className="error__message">{errMsg}</p>}
+        {errMsg && <p className='error__message'>{errMsg}</p>}
       </Form>
     </Card>
   );
 };
 
 export default ContactCard;
+
+
+
